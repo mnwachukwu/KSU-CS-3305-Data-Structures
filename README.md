@@ -1,6 +1,6 @@
 # Kennesaw State University CS 3305 Data Structures
 - Author: Matt Nwachukwu
-- Spring2026
+- Spring 2026
  
 ---
 
