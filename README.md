@@ -1,11 +1,11 @@
 # Kennesaw State University CS 3305 Data Structures
 - Author: Matt Nwachukwu
 - Spring 2026
- 
+
 ---
 
-This repository contains code I wrote for the Kennesaw State University CS 3305 - Data Structures class during the Spring 2026 semester.
+This repository contains code I wrote for the Kennesaw State University CS 3305 Data Structures class during the Spring 2026 semester.
 
-I had Instructor Bradley Maxwell.
+I had Instructor Maxwell Bradley.
 
 Java was required for this class, so I used Java.

@@ -1,7 +1,7 @@
 // Name:        Matt Nwachukwu
 // Class        CS 3305/Section 04
 // Term:        Spring 2026
-// Instructor:  Professor Maxwell
+// Instructor:  Professor Maxwell Bradley
 // Assignment:  4
 // IDE Name:    VS Code
 

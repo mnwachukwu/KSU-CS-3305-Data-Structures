@@ -1,13 +1,13 @@
 // Name:        Matt Nwachukwu
 // Class        CS 3305/Section 04
 // Term:        Spring 2026
-// Instructor:  Professor Maxwell
+// Instructor:  Professor Maxwell Bradley
 // Assignment:  3
 // IDE Name:    VS Code
 
 /*
-  This class define a linked list that stores integer values.
-  The class does NOT use Head and Tail pointer as the textbook class deos.
+   This class define a linked list that stores integer values.
+   The class does NOT use Head and Tail pointer as the textbook class deos.
 */
 
 public class LinkedList_No_HT {
