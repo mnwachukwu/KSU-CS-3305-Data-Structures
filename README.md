@@ -9,3 +9,11 @@ This repository contains code I wrote for the Kennesaw State University CS 3305 
 I had Instructor Maxwell Bradley.
 
 Java was required for this class, so I used Java.
+
+## Assignments
+
+- Assignment 1 - Object Oriented Programming: Classes
+- Assignment 2 - Recursion
+- Assignment 3 - Linked Lists
+- Assignment 4 - Stacks
+- Assignment 5 - Queues
