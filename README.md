@@ -17,3 +17,5 @@ Java was required for this class, so I used Java.
 - Assignment 3 - Linked Lists
 - Assignment 4 - Stacks
 - Assignment 5 - Queues
+- Assignment 6 - Trees
+- Assignment 7 - Heaps
