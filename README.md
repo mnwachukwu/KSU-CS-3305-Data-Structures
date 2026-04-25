@@ -19,3 +19,4 @@ Java was required for this class, so I used Java.
 - Assignment 5 - Queues
 - Assignment 6 - Trees
 - Assignment 7 - Heaps
+- Assignment 8 - Hash Tables
