@@ -20,3 +20,4 @@ Java was required for this class, so I used Java.
 - Assignment 6 - Trees
 - Assignment 7 - Heaps
 - Assignment 8 - Hash Tables
+- Assignment 9 - Graphs
