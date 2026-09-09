@@ -1,0 +1,67 @@
+# Name:        Matt Nwachukwu
+# Class:       CS 3305/Section04
+# Term:        Spring 2026
+# Instructor:  Professor Maxwell Bradley
+# Assignment:  1
+# Ported to:   Compass
+# Playground: https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCtVY2U4jRxR991cc2YqwhekYSIhkxrOEmdEQhREanMzDiIfCfe0u0V1lVVXTONFI-Yh8Yb4kqqU33CxKyEP8Qlf71l3OPXcxA-zt7e3hLePpZk7ZWkeLzL16xk-vN8BHltEU4XPGjMHHgi2S_LrIewOcpEzr8uuTCxweTr7_9oIWhksx-a43wJxUVl2_WCsuVjiYHBz1BjgV2qh8YaSaAudKLklrqXDGbgtKU_yoWJzSpjfAG635SmQkzBTY7w1wLpWhGEZazScyWzOtra-vdZ5lTG2meIOC6BpyCUPZmhQzuSI9hhSEpVQgtkgQs03Uy2RMaQPGXs962tR1KmK6xQRc40yKmG3G2LeHeU7anZiIoSWkiNxdLgytSH25dLb1cdA46JUw1KrnCUGwjLTzNCHrkh6DC3eQKiblnhSxmIuVxkJmBC6iXq1MUcbUtbYxLzmlMRQzibvHBBgWUmjDhImwUz7uYCFvSGmn2mzWpFEkUlOlk2dZbtgVT7nZ2EhZah3YWOvrlAyNUSR8kUCT0WCKIKTBhgxYJsUqasa7zq9SvoBOmKIY2lgCfLnEW7bRmOH3vke0P0Y_wGkfP1MswqHy6YFPf57kqrz7XvHwdGGTXj7nzszX4-30ztk12RBTaLohgdhSoUWbqLxTpmHqeBROWJOC44GPBUuutIma0S9z4SqiQbNhzZJS66iK1SRcR448mFVfH7uvScSVuu1YPpFLictrHYBjvPXYET7cidnGEXsacukimDjREIdJlMxXCY7cS49gdb2hfursCSpKV7tjvyBjIy8DR-nAuCyYpss1FnxZSeLlDBNXbdWbFzMctShSQ_elFLrErKn6uJK3WPLlE2D9IAtkTGxceaIgRbiiVBZYKqLfqogHeL2xFag9IguZC2MLu6reXNiCPjxoAVRGXwH1PigdNkAIMl7lDJPjugGkUq59PzO-cZQAtHDhSxi8wOHBVkGVOv3fXewft0QaIJVHa7G270L2t59C0bLllR2vYCojbTz_7AtiKuX2jWVskViwTSFhOLVg862kRu2z19MBWmmhAzZLbI4Z9pELw9MGeNGJDWgLwppd_BIvm-dg5XIL39o8_0fINia87ZqVoXvB7ho0nxU3pEE3pByLXRVxo0tujqvpYzlkp0aaZ91jxibwJ3bDUChpyEGAgpsEdribpdO8883e_kTvROVwRsI0hAwDquCxScbQstHwCGsWu3bKNWKbepf5v_74M_Qn7nt0MFIwK8W7h03FiXMr7NvtqDvxk6ck_kQKLVOKHIg_c0HDRk7OWTy8myJ-Ocb-ZITdNmFGx9vJfkLB0K3xAOs1W9hRFccUB7-5ccAYpMS0wY6DdgdpNYZbg7eBDIuH4Z2hW1P3YKegBivIrL3NmRO-W0RFwlMKIh49vPB6WihWOoLkqdCkzLCPfhcud4rA3-mivD25Hc4ugG4lnpM2_9VG_D9eiS0sWCu5Uixz_G-wthdo4pfhcy_kc1BR5oxxsd1dyy3XLnNfG8zYrpn-O2Hc2L-7Xjln3Cggup5aNjxcqz_cX5wdlYhd9KctjrmG40QCBUO80Sdi8akPazh6kJS1Gf87Y-bWn8Z25_SPHsSjYaADLJstS4yMTCLjRiebNkOxxqNml3s-i-UW0rLXce1jnl2RstO8XIbCGNHoY9d7WG80Nhvu-_4zuhpG_2OeztvbRrWA2AQ2va02iWd0MSy_97tYl8cG3K22RmKRMLEiDCezsJJHUYSjmV_FR21W312rMUMnr--LqXTAErm13HcZEVTYcJ5gwyFarv71yh8U_BuEf1nHzLW8Rit5rDgen7Zv7E_hlCA8re2v4xhcjCEVJmEdFdIkNre5Zlep5ZTe2v-LhBm3pDgF_nbrvwN1X20hd2fwvgoOzCoArHQLYLuVWpnoA9O_sjSnhpKGvVdlRLMgHmSjuexKW9Ds79ynuh7PQS4IPbrm8uXd-T55eLT_DQGtk2ztEgAA
+
+# @summary: Test program for DailyTemps.
+shared model Program
+
+    function Main()
+        integer[] temps = {};
+
+        Console.WriteLine("Enter daily temperatures for the week:");
+
+        loop for i = 0 until 7
+            Console.Write(DailyTemps.Days[i] + ": ");
+            temps.Insert(Program.ReadInteger());
+        end loop
+
+        DailyTemps week = new DailyTemps(temps);
+
+        Console.WriteLine();
+        Console.WriteLine("Testing method PrintTemps:");
+        week.PrintTemps();
+
+        Console.WriteLine();
+        Console.WriteLine("Testing method Freezing:");
+        Console.WriteLine("Number of freezing days is " + week.Freezing() + " days");
+
+        Console.WriteLine();
+        Console.WriteLine("Testing method Warmest:");
+        Console.WriteLine("The warmest day of the week is " + week.Warmest());
+
+        Console.WriteLine();
+        Console.WriteLine("Testing method SetTemp:");
+        Console.Write("Enter day index to change (0=Monday ... 6=Sunday): ");
+        integer dayIndex = Program.ReadInteger();
+
+        Console.Write("Enter new temperature: ");
+        integer newTemp = Program.ReadInteger();
+
+        week.SetTemp(dayIndex, newTemp);
+
+        Console.WriteLine();
+        Console.WriteLine("Updated temperatures:");
+        week.PrintTemps();
+    end function
+
+    # @summary: A whole number typed in, or 0 where nothing usable was.
+    # @yields: what was typed, or 0.
+    integer function ReadInteger()
+        string? typed = Console.Read();
+
+        if typed.HasValue()
+            integer? number = typed.Value().ToInteger();
+
+            if number.HasValue()
+                yield number.Value();
+            end if
+        end if
+
+        yield 0;
+    end function
+
+end model

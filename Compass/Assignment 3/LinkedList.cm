@@ -1,0 +1,202 @@
+# Name:        Matt Nwachukwu
+# Class:       CS 3305/Section 04
+# Term:        Spring 2026
+# Instructor:  Professor Maxwell Bradley
+# Assignment:  3
+# Ported to:   Compass
+# Playground: https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCtVZzW7bRhC-6ymm0iEyIquy3RSIXaN1jRZNkThBHLTnNTkSFyZ31d2lafXUh-gT9kmKmeXPkhJl2k5bVBdL5O78fPM_nsDh4eEhvJXqFuO30rp5lPGjz_gZjSZwJTI8hfLzTjgHV4WIkvy2yEcTuEyFtdXry2s4OVm8-vIaIye1gsVXowl8QpPV96_XRqoVHC-Ovx5N4I2yzuSR0-YU4IPRS7RWG3gn7gtMU_jeiDjFzWgCF9bKlcpQuVOAk9EEPmjjMAanifKlztbC2tFoMhkRkwtIGRRIpXWgl1AkOkVQeXaDxs4g0WlMUigNTsgU1loqh2Y-4tufEoSfxZ0AVDHGIJ31dArpElB5ms7piEGQFpRWCPRjBlaDS5A50xuhQK8JBJGCUDHgHZoN0y9EeguJsOA0rI2-Q7rnyQlQOka4waU2CAYFi0k8_vrjTygSGSV0jPi8cJit4YtzlugFPyKhPQejHYJw_NTpNUGAIkog1Xo9A6ULiBKMCKGbDR-KdLaWKRowgoQBlwhF7xKh4jnBmukY08DXPFQT-M7mWSbM5pRhW0pjHeswA3FjUTkSOsUSGetIeszWbjPn-1c6xm8hQRGfbRO8iOMaEefBRRWTLhU1T2Sd36QygmWuvNNdxPFbYR3RnpJdV2ggFk4cjConlEtQmtCRdk7M5z8J-4tIc5w2Z-hTH4BzUFiwuFMmddY6t5GYxs0jklIuR_XvK9aAzHUe8CwZnjXnyDoVXpit5wrvXa9oJbn6XE0ulIIoNvTrwz3q0I0KxUHmWBqt3CCD_EiOscciDNHSoE12yFaf4gOVBjWSjcqhvfjsY_USDgSs5B0qWGsr6cK8uiBVjPenUHCsUujmDqSbQaRz5ShMl0ZnsOiF4MK9IQo1AExvBr0eyu_hG1h0XNLoghFiau9z9375UagV_nAfIeeb6dg12amkMoaX_ttBv5fWLM_Pt3hKO28Z8Wkx8C1EuTGUFHZar0KCAYVzWOwOjZJGEBicX_2tb0odDuGoJV3DuLpe3mVvamtS8fd_X8LRvpgqU8m2UE-xWp0ibULlrUzDQ4zH8UNlDc22jmfPCTNPtANT8PAxofYRM32Hvn41pWJ3xPizjcs9JXtXoPegzIVovAfVMJ9sJe4AkuFap2KA0nX1-i909i7CxtlfrUqR-Oj-UhWgGDSrV9rr-PhS2gQzM9-fJsLiuFfM7RQxtK6G5_fpONxNhhcj6gipP3QaDBMYWJA8t5016b-uQv-Soz9Q77byz3P8dEccPbHqdTz4SaVvt18_t_TtTwH_cP3rhGBv8A8JxJ90AZlQG45C24wuVPRsK5oq29VRdUm4ke1tmLvLU0TkWv6O3sgDGqNh3U8L6IBH_bVlxsc0Q9smZ6-vKfeCOakvNKj-aqQL0bwR0S1lLZ4h5g2L7wxmwtxaSohRbqyklCb8RVFvAUDYW4zn8ANNtZFIUxqWo6RkQCKVM3RhJOXCmrxQG5dItarn9fIAJGK9RmUrVkTTQq4KSQNwoFU3kX4wUrk36iPN9zY0R1AG-MyPRmfT2rqDSkIXMz9vOc3gzfvFIabTg46LdQfQPYNnj3NdamV1inMWa8onK8ehFhJewhgAxp2cEk6qD_jZYESo4vkaWW1W2KgglpQ1aCrruBfRsYkwGHegYqt4gGhzs9Vx0cM-PB6oATsdgOmFMARotfFtndyB78C4u1DVJsavZZba-NrIeHn9dkVfsOKCQmwISwoVgtzfb9ZbsTQYuXTDMUWmkRYyQXusTU04xigVvPqTjq1Gm6XyJ9sqV07nUUJB_SmRlmgUSbnC4m2cFTKm6HzBC69WTJaW9Was7Vs1X504oJXdWSejNc_2u997hXBHJgGp6rCcsT717o-ASoQjr4SlTlNdWJClC_otGslRC9ApJWTos-7LUnAOmu67QN1guyIdZju6cHajc37b9tta5eoBSzoaBV8nft38Ca37x1bO_891M0FCm9yVERnHV4BPZ6Ucl_teaX13LiBDlZcub3KqP7CU9xiDxd9yVBF5mnUo4rpg6dzx6onrgnd_kaHPguBk5pNiRPtbv0IGsRJEJFjCOojRRkbeoOXtbhlA3j0_eE285LV7vRNS7axunqRfJzRPW6NiK7G9lQqn44uYo_9oMYPjxQxOFsGK9zQsIbxWDFe6R4t9b4_3vj0J35Z6zq8TXUzp6DCRX7W2nztlbaaGV8_nd_SKJkHf2x_vZFdNccczOHoOw8tycDzllpuphw0t1x_uicd9RYvp9HKZjt8oML5ROoUtTbqd1AM8niCAV5MnO0K2vYbahnbPCPhYaFs86yVQH8tmAfSZOFb7BO9FR318K0c6eo7X2lvePehymwCvZ80_rvxoj8Zr3uzZzGZriumI9DoQKRIuSnonScD-ptWLCGBwmVuMvaPj_B1aK1Y4PehMmJVcj-vSubvRBaTatzeyHBrrVMpQdhLoQV_IQE-gVEl2j57TB8L4YDwkxtrKNw3B34Ag_rp_HgAA
+
+##
+    A linked list of whole numbers, holding no tail pointer.
+
+    The Java ended its list with null. There is none here, so the link is an optional and every
+    walk has to prove there is a node before reading one — which is the 'temp != null' the Java
+    wrote at the top of each loop, now checked by the compiler rather than by hand.
+##
+model LinkedList
+
+    # @summary: The first node, absent while the list is empty.
+    Node? head;
+
+    # @summary: Adds a node to the end of the list.
+    public function AddLastNode(integer data)
+        if not this.head.HasValue()
+            this.head = new Node(data);
+            yield;
+        end if
+
+        Node temp = this.head.Value();
+
+        loop while temp.next.HasValue()
+            temp = temp.next.Value();
+        end loop
+
+        temp.next = new Node(data);
+    end function
+
+    # @summary: Adds a node to the front of the list.
+    public function AddFirstNode(integer data)
+        Node fresh = new Node(data);
+
+        fresh.next = this.head;
+        this.head = fresh;
+    end function
+
+    # @summary: Adds a node at a given position.
+    # @index: where to put it, counting from 0.
+    public function AddAtIndex(integer index, integer data)
+        if index < 0
+            throw new IndexOutOfRangeException("there is no index " + index);
+        end if
+
+        if index == 0
+            this.AddFirstNode(data);
+            yield;
+        end if
+
+        Node? current = this.head;
+        integer count = 0;
+
+        loop while current.HasValue() and count < index - 1
+            current = current.Value().next;
+            count = count + 1;
+        end loop
+
+        if not current.HasValue()
+            throw new IndexOutOfRangeException("the list is shorter than " + index);
+        end if
+
+        Node holder = current.Value();
+        Node fresh = new Node(data);
+
+        fresh.next = holder.next;
+        holder.next = fresh;
+    end function
+
+    # @summary: Removes the first node.
+    public function RemoveFirstNode()
+        if not this.head.HasValue()
+            throw new Exception("the list is empty");
+        end if
+
+        this.head = this.head.Value().next;
+    end function
+
+    # @summary: Removes the last node.
+    public function RemoveLastNode()
+        if not this.head.HasValue()
+            throw new Exception("the list is empty");
+        end if
+
+        Node first = this.head.Value();
+
+        if not first.next.HasValue()
+            this.head = LinkedList.NoNode();
+            yield;
+        end if
+
+        Node current = first;
+
+        loop while current.next.Value().next.HasValue()
+            current = current.next.Value();
+        end loop
+
+        current.next = LinkedList.NoNode();
+    end function
+
+    # @summary: Removes the node at a given position.
+    # @index: which one to remove, counting from 0.
+    public function RemoveAtIndex(integer index)
+        if index < 0
+            throw new IndexOutOfRangeException("there is no index " + index);
+        end if
+
+        if not this.head.HasValue()
+            throw new Exception("the list is empty");
+        end if
+
+        if index == 0
+            this.RemoveFirstNode();
+            yield;
+        end if
+
+        Node current = this.head.Value();
+        integer count = 0;
+
+        loop while current.next.HasValue() and count < index - 1
+            current = current.next.Value();
+            count = count + 1;
+        end loop
+
+        if not current.next.HasValue()
+            throw new IndexOutOfRangeException("the list is shorter than " + index);
+        end if
+
+        current.next = current.next.Value().next;
+    end function
+
+    # @summary: How many nodes the list holds.
+    public integer function CountNodes()
+        integer listSize = 0;
+        Node? current = this.head;
+
+        loop while current.HasValue()
+            listSize = listSize + 1;
+            current = current.Value().next;
+        end loop
+
+        yield listSize;
+    end function
+
+    ##
+        @summary: Writes the list back to front.
+
+        @remarks: Recursive, as the assignment asked. Each call reaches the end before writing
+        anything, so the writing happens as the calls unwind.
+    ##
+    public function PrintInReverse()
+        LinkedList.PrintFrom(this.head);
+    end function
+
+    # @summary: Writes the list front to back.
+    public function PrintList()
+        Node? temp = this.head;
+
+        loop while temp.HasValue()
+            Console.Write(temp.Value().data + "   ");
+            temp = temp.Value().next;
+        end loop
+    end function
+
+    # @summary: Writes one node and everything after it, back to front.
+    shared function PrintFrom(Node? link)
+        if not link.HasValue()
+            yield;
+        end if
+
+        LinkedList.PrintFrom(link.Value().next);
+        Console.Write(link.Value().data + "   ");
+    end function
+
+    ##
+        @summary: An absent node, for emptying a link.
+
+        @remarks: There is no way to write an empty optional directly, so one is made by
+        declaring it and handing it back untouched. This is what the Java said as 'null'.
+    ##
+    shared Node? function NoNode()
+        Node? none;
+        yield none;
+    end function
+
+    # @summary: One value in the list, and the link to whatever follows it.
+    model Node
+        public integer data;
+        public Node? next;
+
+        public function Node(integer item)
+            this.data = item;
+        end function
+    end model
+
+end model

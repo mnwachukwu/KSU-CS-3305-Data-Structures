@@ -1,0 +1,332 @@
+# Name:        Matt Nwachukwu
+# Class:       CS 3305/Section 04
+# Term:        Spring 2026
+# Instructor:  Professor Bradley
+# Assignment:  9
+# Ported to:   Compass
+# Playground: https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCsUa227juPXdX3FgP8RpHDVKugXqIJh1s9PZFBMnmEm7QAOnoKVjm7FEekkqHu-iQD-iX9gvKQ6pqy35NrOoHgKZIg_P_ZoODFmMfUife2YMDJcsmCXzZdLqwG3EtM4-336Gq6uL737_GQPDpYCLP7Q68IQqzs9_XigupnB5cfnHVgfuhDYqCYxUfYBHJSeotVTwZ8XCCFetDgy05lMRozB9gD-1OvAolcEQjCSItzJeMK1brU6nRcA_KLaYgUIWzNiYR9ysIGZG8QC117I7BhByhQGBmNrNXMOUv6EApoEJYOErC1AE6cEvMPA9-IuSMXADZoawUHKqWAyBjBeJQW2hfoIbGPhwBoNLOAPP8-h12IPlDBXCYE630OH5uZllgBdyiQrkBAZ-D5gIIUTF31CDQQExEtYF0lPFQ7DAuIYTLgxOUT2Pnkcn8N9__wcYaDSwnEmNgBESuzQwhbSs3Q4ROvTpVvvNQi6Deh6d9FJIcmJv1B4MkZsZKhCIIYbAYILMJAppCzca5FL04YTwiJEJDe0MQLtnL6B7uYGACRgjaMZDMEseIEgFZqYQwfCYpNPptGIZYuRk6OjuwPc6iWOmVn34US4hZmIFQobouOkEOGPas7sXyTjiAaQUgbjeBPI0ww0J90jy3MCSaUBhUGFYB4_4A8yvA8rmKUKEGgQyESbn9_ptFdCTRDgzsTR3c8x7a5eetjLrMTOuPQE3RF1ljflwY9GjFRRhDnsT31Sb5MQx0Sq_5r9gD_AN1QoCjCL4BZWs4KpnTGFYQSxH_x-opM7RJ1gFxuUD44RHBm7g13-lbKQnknIBE6ngn3ADF5AIwyMLI99RAQNKLtdB7A-GHiWX3p3QqEz34vS68pkYR4CqoC3a2REll6VDmwdWHKPQHdlHGE9LCfrnhGw181QQJ5Hhi4hj2LMi0oaJkKkQjOKLCO2FjSqaC-XeQVl1y19jv6pb8WW9pBTqxIrKaqbnBOyU77ROdrzEdLetXjiv2_c57pCVhtKQqw2TwHojEjqnl9iHJTczCGSUxAJe7dqltwElv3G--0arFJbgZz56fh3BTfXnGcQ-vc5H8DuIL5_ntHq9ASbXha2LTRrjbmxUmU6-vWTILz75UJlMZzB4GXoFyO8VxkzNdR_eu2gAFxQ4Bi8-xSQezLKAtBHuuNEYTa6BQihIgcAmBhX5R65LHgfttzFOJClurq8wXlHALKO8qaJlJb11UfTRRqVurS4-j7KgdQO_pr6u1n-QpP1mSTsgmRnbDbmJuG_PczgHf9TLPOrpHobuTu5j6TZHeLFJwkspS3gZ9oD2YOgc79g54N32nbLuUynZ6daxrcHA97ft-Z62zXdb2iF-wFplYZC5LWayGrmVb26HzbI8Pz8_t86JMjSFPyecIqJMzCIx2n495tnUlJ8UN6iB2Tjdc6b4xqIEYSKjSC6dnRmKHAtmU9u6nOJRcWHurVV3tbFJt-EmwrUAYDcUOnIrhZYRehaHj1xg1x76rZ1-5dquQyqXeBugvVeg3kS-zoIP8LCpJMjfcXEe4pQSVjlJEyVK92qd7tP6fpsYvmZOVycxLWYhrA-zLLfFcIoaFpILQ1KSwE2dM63K-E78YC8q-89NTrTvMoR0v10rzh1iytO7JKaNTenXHl7AQaC_Z5mrrbPlfWXcHhJ323AG3Vc4A__UqkzBf67tR53EB2hDvRLIxNRqwVpUTQVM9RElm82ie0jMXrJ7yO9tEh7_JsJ7_X8KjxfCK_H5KOltseXc1ijPOScgG8VkjUUPiu3AjLNnTrgxEFKcU7UEA8sIPurlxZ912q4Qv6CC1--BlpUsKuRsKgWLiD4NRtpFW0HutvvPGE0-Ev7bdedJGhaBSOKxazcUdPctZ60QnxQLsLuW9xzJ2GAVRKitgXxhgYlWMEwdm7EdDKaavaYhPGxT5GVICe7QsdSxxAkqiKTGEJYsmttLIhRTM4MhmBkzVCspkwMnQRAVuch2c_XWYl8pmpg4iMEF_SlqOZer1kSKbvmyIQcmtohgC-cXzMwqjKckna4oOF_yVM59oTBq5dpQWxzVI0F-mHy0BPmHKVyOVcoO36JUJpoO7KF8h1C-oXJbCKfSaT_Kh1-jF-t8OEQtLIe-Wi1IHbKC8QAGfdpbMZ5klUPqKxXFyMO5pI5jUmG1O7hkym5qG2ucJ_lGvNlwKgczx3qWrcxx9Q2VFTYYuXzH1jZsLN_QtQDh6-ubpyJFcjXOic4DoeNnlq7kDHXYbytcmjOcfXOkcmZTVCB8tLsJoJN4r15fQXep08pFyoUm0q1W_7akH5sAlgu16-Pq7Qbe0S87D8hnO8S9GEWS5g4_WYskJf0re2Mwx4UBBichM-y96-KfwCRiUxij5qHbmTX8iTKYySi0Ix-5oCtZ5FJAL7_Mns5SOYJrEzmb37MYYcIC41K9MgzNVnaaIEWAdqiR9s3dbOPRDY8cBUWnlnFRCqm2LfPOYXO9IWR3U42c96-E6Ukx8X7gehGx1T2KpHu6VhZ0YCAA44VZAROaplU8q4UXiQGVCEFdBZmYLHagCHVlSkbvS7aCKwhl1qjInpySDJdPyMI7R2b31HtQ3as1pGupqtrwkhtqXFrQG6obMI3g92tbTS7_L5CxSmRF8QMzbOOiHNxlPTg-SdXpR6b_TmVAScDrT3ZlVhKSy-260-nR0-vawxhpbIRaE1TeK0WD1scICXM77Erptuo94Uob6D44ufinXrvpXhrqTRoYclXPkDp0vnBDCpQqiwcfpAzHK_TaddwOccKSyOwN_U68sYjmXJYcr0q134PLHpVkV15da8mpUb7s_GGmrzdwdVjXIGZcpK6rYvcV29uWDLhAej-4G8L9--Hf3M8y3jVnfA_erwl4x4lLz-UtWdTfsf3KAxJgJr3G3d22wyNln0tp-nlHb0fTHFm492y1Z1M3G1QZBQOaLHul_wvIGb9u29sRL5IwN3ru2tTru9N-pSuZD2-3OTS_rNjVGW_jWLQcusWRM9HXRhiNVA_8Z8odqSnT7tEb9dbaoz7UOYXSSLWR9ovTvXq4zN930ro1xtUo7IfC06VzftBJEKDWkySKVlWv45ITgct0Ni96NIffq7CQihoTiUmTvHSUSkq7LHwCjRCy7JoLkCpEteYeKuHAIW9teeeUzIWOtdHadeMYqLK9Mk5KB0j1RxlpejqMcSCEHZ-VmOiWy4OI9p1NHdyvfruXbslZu1OuNSDLKJcgqyNAllrphx8uN3MPP13q5h1-OG1aMXHE2fXWzldCGH4LLKhWVkfz4TgwjXH3kGe_qDagf9WKMIssZrWw_1nTAzbWNKyn4qGUaM-YpmSb_EWlRnxX-IqKt10313egmHhITEGrmwe-S2--yWknMJVUl1PQM25fUyqbzk3XrljPEd0uByiF4j3JtQixvRL8H_Nl-EeKKAAA
+
+##
+    Graph reachability matrices.
+
+    A directed graph is given as an adjacency matrix A1. From it the program computes
+    R = A1 + A2 + ... + AN, where Ak is the k-th matrix power of A1, and derives ten metrics.
+
+    A grid here is 'integer[][]' — a set whose elements are sets — and the powers are
+    'integer[][][]', a set of grids. Neither needed a feature of its own: '[]' means "a set of",
+    and it can be said twice or three times.
+##
+model Graph
+
+    # @summary: How many nodes the graph has.
+    public integer n;
+
+    # @summary: The adjacency matrix, as it was entered.
+    public integer[][] a1;
+
+    # @summary: Takes the node count and the adjacency matrix.
+    public function Graph(integer n, integer[][] a1)
+        this.n = n;
+        this.a1 = a1;
+    end function
+
+    # @summary: A grid of the given size, every cell zero.
+    public shared integer[][] function Zeros(integer size)
+        integer[][] built = {};
+
+        loop for _ = 0 until size
+            integer[] row = {};
+
+            loop for _ = 0 until size
+                row.Insert(0);
+            end loop
+
+            built.Insert(row);
+        end loop
+
+        yield built;
+    end function
+
+    # @summary: Two square matrices multiplied, the standard triple loop.
+    public integer[][] function Multiply(integer[][] m1, integer[][] m2)
+        integer[][] result = Graph.Zeros(this.n);
+
+        loop for i = 0 until this.n
+            loop for j = 0 until this.n
+                # The dot product of row i of m1 with column j of m2.
+                loop for k = 0 until this.n
+                    result[i][j] = result[i][j] + m1[i][k] * m2[k][j];
+                end loop
+            end loop
+        end loop
+
+        yield result;
+    end function
+
+    ##
+        @summary: A^1 through A^N.
+
+        @remarks: Element 0 is A^1, which is the adjacency matrix itself; each one after it is
+        the one before multiplied by A1.
+    ##
+    public integer[][][] function ComputePowers()
+        integer[][][] powers = {this.a1};
+
+        loop for k = 1 until this.n
+            powers.Insert(this.Multiply(powers[k - 1], this.a1));
+        end loop
+
+        yield powers;
+    end function
+
+    # @summary: R = A^1 + A^2 + ... + A^N, summed cell by cell.
+    public integer[][] function ComputeReachability(integer[][][] powers)
+        integer[][] r = Graph.Zeros(this.n);
+
+        loop for k = 0 until this.n
+            loop for i = 0 until this.n
+                loop for j = 0 until this.n
+                    r[i][j] = r[i][j] + powers[k][i][j];
+                end loop
+            end loop
+        end loop
+
+        yield r;
+    end function
+
+    # ---- The ten required outputs --------------------------------------------------------
+
+    # @summary: Writes a grid, each value followed by two spaces.
+    public function PrintMatrix(string title, integer[][] matrix)
+        Console.WriteLine(title);
+
+        loop for i = 0 until this.n
+            loop for j = 0 until this.n
+                Console.Write(matrix[i][j] + "  ");
+            end loop
+
+            Console.WriteLine();
+        end loop
+    end function
+
+    ##
+        @summary: Writes the in-degree of every node.
+
+        @remarks: The in-degree of node j is the sum of column j: how many edges point into it.
+    ##
+    public function PrintInDegrees()
+        Console.WriteLine("In-degrees:");
+
+        loop for j = 0 until this.n
+            integer sum = 0;
+
+            loop for i = 0 until this.n
+                sum = sum + this.a1[i][j];
+            end loop
+
+            Console.WriteLine("Node " + (j + 1) + " in-degree is " + sum);
+        end loop
+    end function
+
+    # @summary: Writes the out-degree of every node, which is the sum of its row.
+    public function PrintOutDegrees()
+        Console.WriteLine("Out-degrees:");
+
+        loop for i = 0 until this.n
+            integer sum = 0;
+
+            loop for j = 0 until this.n
+                sum = sum + this.a1[i][j];
+            end loop
+
+            Console.WriteLine("Node " + (i + 1) + " out-degree is " + sum);
+        end loop
+    end function
+
+    ##
+        @summary: Writes how many self-loops the graph has.
+
+        @remarks: A self-loop at node i is a non-zero A1[i][i], and the values are 0 or 1, so
+        the diagonal sums to the count.
+    ##
+    public function PrintSelfLoops()
+        Console.WriteLine("Total number of self-loops: " + this.Trace(this.a1));
+    end function
+
+    ##
+        @summary: Writes how many cycles of exactly N edges there are.
+
+        @remarks: The trace of A^N: A^N[i][i] counts the closed walks of length N that start
+        and end at node i.
+    ##
+    public function PrintCycles(integer[][] an)
+        Console.WriteLine("Total number of cycles of length " + this.n
+            + " edges: " + this.Trace(an));
+    end function
+
+    # @summary: Writes how many paths of exactly one edge there are, which is every entry of A1.
+    public function PrintPathsOfLength1()
+        Console.WriteLine("Total number of paths of length 1 edge: " + this.Total(this.a1));
+    end function
+
+    # @summary: Writes how many paths of exactly N edges there are, which is every entry of A^N.
+    public function PrintPathsOfLengthN(integer[][] an)
+        Console.WriteLine("Total number of paths of length " + this.n
+            + " edges: " + this.Total(an));
+    end function
+
+    # @summary: Writes how many paths of one through N edges there are, which is every entry of R.
+    public function PrintPathsOfLength1ToN(integer[][] r)
+        Console.WriteLine("Total number of paths of length 1 to " + this.n
+            + " edges: " + this.Total(r));
+    end function
+
+    # @summary: Writes how many cycles of one through N edges there are, the trace of R.
+    public function PrintCyclesOfLength1ToN(integer[][] r)
+        Console.WriteLine("Total number of cycles of length 1 to " + this.n
+            + " edges: " + this.Trace(r));
+    end function
+
+    # ---- Two sums the outputs above share ------------------------------------------------
+
+    # @summary: The sum of a grid's diagonal.
+    integer function Trace(integer[][] matrix)
+        integer sum = 0;
+
+        loop for i = 0 until this.n
+            sum = sum + matrix[i][i];
+        end loop
+
+        yield sum;
+    end function
+
+    # @summary: The sum of every cell in a grid.
+    integer function Total(integer[][] matrix)
+        integer sum = 0;
+
+        loop for i = 0 until this.n
+            loop for j = 0 until this.n
+                sum = sum + matrix[i][j];
+            end loop
+        end loop
+
+        yield sum;
+    end function
+
+end model
+
+##
+    The menu.
+
+    Where the Java kept a 'dataEntered' flag beside the matrix, this holds an optional graph.
+    The flag and the data are the same fact, and an optional says it once.
+##
+shared model Program
+
+    function Main()
+        Graph? graph;
+        integer option = 0;
+
+        loop
+            Console.WriteLine();
+            Program.DisplayMenu();
+
+            # An empty answer is the input running out, which ends the program the way 3 does.
+            option = Program.ReadInteger().Or(3);
+            Console.WriteLine();
+
+            switch option
+                case 1:
+                    graph = Program.EnterGraphData();
+
+                case 2:
+                    if graph.HasValue()
+                        Program.PrintOutputs(graph.Value());
+                    else
+                        Console.WriteLine("Error: Please enter graph data first (Option 1).");
+                    end if
+
+                case 3:
+                    Console.WriteLine("Exiting program. Goodbye.");
+
+                default:
+                    Console.WriteLine("Invalid option. Please enter 1, 2, or 3.");
+            end switch
+        until option == 3
+    end function
+
+    # @summary: Writes the main menu.
+    function DisplayMenu()
+        Console.WriteLine("------MAIN MENU------");
+        Console.WriteLine("1. Enter graph data");
+        Console.WriteLine("2. Print outputs");
+        Console.WriteLine("3. Exit program");
+        Console.Write("Enter option number: ");
+    end function
+
+    # @summary: Reads the node count and the adjacency matrix, one cell at a time.
+    Graph function EnterGraphData()
+        Console.Write("Enter number of nodes (1 to 5): ");
+        integer n = Program.ReadInteger().Or(1);
+
+        integer[][] a1 = {};
+
+        loop for i = 0 until n
+            integer[] row = {};
+
+            loop for j = 0 until n
+                Console.Write("Enter A1[" + i + "," + j + "]: ");
+                row.Insert(Program.ReadInteger().Or(0));
+            end loop
+
+            a1.Insert(row);
+        end loop
+
+        Console.WriteLine();
+        Console.WriteLine("Graph data entered successfully.");
+
+        yield new Graph(n, a1);
+    end function
+
+    # @summary: Works out every result and writes the ten outputs in order.
+    function PrintOutputs(Graph graph)
+        integer[][][] powers = graph.ComputePowers();
+        integer[][] r = graph.ComputeReachability(powers);
+        integer[][] an = powers[graph.n - 1];
+
+        graph.PrintMatrix("Input Matrix:", graph.a1);
+        Console.WriteLine();
+        graph.PrintMatrix("Reachability Matrix:", r);
+        Console.WriteLine();
+        graph.PrintInDegrees();
+        Console.WriteLine();
+        graph.PrintOutDegrees();
+        Console.WriteLine();
+        graph.PrintSelfLoops();
+        Console.WriteLine();
+        graph.PrintCycles(an);
+        Console.WriteLine();
+        graph.PrintPathsOfLength1();
+        Console.WriteLine();
+        graph.PrintPathsOfLengthN(an);
+        Console.WriteLine();
+        graph.PrintPathsOfLength1ToN(r);
+        Console.WriteLine();
+        graph.PrintCyclesOfLength1ToN(r);
+        Console.WriteLine();
+        Console.WriteLine("--------------------------------------------------");
+    end function
+
+    # @summary: A whole number typed in, absent once the input has run out.
+    integer? function ReadInteger()
+        integer? ranOut;
+        string? typed = Console.Read();
+
+        if not typed.HasValue()
+            yield ranOut;
+        end if
+
+        yield typed.Value().ToInteger().Or(0);
+    end function
+
+end model

@@ -1,0 +1,100 @@
+# Name:        Matt Nwachukwu
+# Class:       CS 3305/Section 04
+# Term:        Spring 2026
+# Instructor:  Professor Maxwell Bradley
+# Assignment:  2
+# Ported to:   Compass
+# Playground: https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCpVWS2_jNhC-61dM7UNkrKs6dtuDAzdJgwBroE6CTXaLou1hIo0tNhJp8BHF_74gqQet2HGrE0XO45sHv-EQ7rCkOdTfCrWGuwrT3LxUJhrCTYFKNcc3jzCbTX764ZFSzQSHyY_REJ5Ilq3-41YyvoHpZPpzNIQlV1qaVAs5B3iQYk1KCQkrfKuoKOBXiVlBu2gI10qxDS-J6znANBrCg5CaMtDCWr4R5RaViqIhXClTlih3c3jKCV5FRQWkwnBtvW6l2Egsk0jlKCmDUmRUWL92N4osvrXhHvoKGY9HUYObcU0bksD41mhYwOSiPVLaheROHv16AYPBRdRKFEJsocpZQbX-dwuYtaf2qzEkD5JxvSJu4lGgb78hXHOgcqt3gFxVFooCnTcWpeHcehZGj62rNAfimZeow3brCncwg0yQSvbMN3E1QL4QZksfczxK7mU86wNSFdNp7hX3DuyXoiI4n7_bd00iuBIFJb9Lpike3HJNErBO4xwGo4uDavv5bYxYnB7gYNBH2AKZHgbC1qHR5Ma2CfwCk4PC75D_xjjFgz-EAbIRUNZE8JcewKfQ8pGAjli8M-UzSRBr373K2juqb79PbdFcBN-cVhz6PwKACkX_B9nS9UhTqTGsmVQ6OVYv4hmw9fuKZLRGU-iPS_L-hpzE9ooFy0Bs7e09Baq_5Xs5Crfsne3AH_BYJx3ojVLjKENpsd1S1jq3Zho-8aZCfnKm_AUtkXEoiZtkn4MCNvgASRDqAZjfN9_qenkHq9u7r-3O4GPN8wTs7aoL4ot-QmWaOC42moD32viE5iyB2zemG676WPrYYUMmvglqCB2jHKjHsDXUFeazqKBEvquBA0pLsq5Qmt702M8TyuB5BxpfHOtygoK0IzJ7QzQrKem650pSifJFzeELpUYq9kpjQF97bCcboHqhbO523dVqTDIF_5hsQ9kYkGfuXJLqSFesW3BWNkeeudEIyIXOSUKKRZF088MJ5qiAizrGZmQwBVWO2o2ObvTpMBSrPO_8aWFvygvoXAqzybuhcrVjVGTKi_abwebTmg1q0AzYtvlDMqtHrPUYjOS126h5e7HoEbfzH87pPiGlOUpMbYJ9thfe3JO4aQ5UPPpz8ve7SW-T30g_mmdFOj4PZw9bt4y8VC6C2HkYHcB3foS-rY_Rcexe-YTiCf7JyTUHBolgCtCXaGxLRKxuH0W-Vs9CFIS8K1ITX2ciHfVAprY0Z9dnIGS9vg3Wy2B9H6y_noXJarcxEKFgzYK1CNbm7L-k4hqqXBRtm-rdliztjQGflb2YgqcUvLXs1ZGG27dWEvbuZZeXvedT_xF5CRL5vdH9xrqsPfdfN_utxYX2cslnVN-wMBQfaqy-i8Md5A3VVpInsffkmxzsI_vnHs7Rv5LxxIcbDAAA
+
+# @summary: The vowel counting program.
+shared model Program
+
+    function Main()
+        integer input = 0;
+        string inputString = "";
+
+        loop while input != 3
+            Program.PrintMenu();
+
+            # An empty answer is the input running out, which ends the program the way 3 does.
+            input = Program.ReadInteger().Or(3);
+
+            switch input
+                case 1:
+                    Console.Write("Enter a string: ");
+                    inputString = Console.Read().Or("");
+
+                case 2:
+                    if inputString.Count > 0
+                        Console.WriteLine("You entered string:\t" + inputString);
+                        Console.WriteLine("Number of vowels:\t"
+                            + Program.CountVowels(inputString));
+                    else
+                        Console.WriteLine("Input a string, first.");
+                    end if
+
+                default:
+                    if input != 3
+                        Console.WriteLine("Invalid option.");
+                    end if
+            end switch
+        end loop
+
+        Console.WriteLine("Program execution stopped.");
+    end function
+
+    # @summary: Writes the main menu.
+    function PrintMenu()
+        Console.WriteLine();
+        Console.WriteLine("---------MAIN MENU---------");
+        Console.WriteLine("1. Read input string");
+        Console.WriteLine("2. Compute number of vowels");
+        Console.WriteLine("3. Exit program");
+        Console.WriteLine();
+        Console.Write("Enter option number: ");
+    end function
+
+    ##
+        @summary: How many vowels are in the text, counted by taking one letter at a time.
+
+        @remarks: Recursive, as the assignment asked: the first letter is judged, and the rest
+        of the text is handed to another call. An empty text has no vowels, which is what ends
+        it.
+
+        @text: the text to look through.
+        @yields: the number of vowels in it.
+    ##
+    integer function CountVowels(string text)
+        if text.Count == 0
+            yield 0;
+        end if
+
+        character first = text.ToCharacters()[0];
+        string rest = text.Subset(1);
+
+        if Program.IsVowel(first)
+            yield 1 + Program.CountVowels(rest);
+        end if
+
+        yield Program.CountVowels(rest);
+    end function
+
+    # @summary: Whether a character is a vowel, in either case.
+    boolean function IsVowel(character c)
+        yield c == 'A' or c == 'E' or c == 'I' or c == 'O' or c == 'U'
+           or c == 'a' or c == 'e' or c == 'i' or c == 'o' or c == 'u';
+    end function
+
+    # @summary: A whole number typed in, absent once the input has run out.
+    integer? function ReadInteger()
+        integer? ranOut;
+        string? typed = Console.Read();
+
+        if not typed.HasValue()
+            yield ranOut;
+        end if
+
+        yield typed.Value().ToInteger().Or(0);
+    end function
+
+end model

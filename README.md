@@ -1,14 +1,137 @@
-# Kennesaw State University CS 3305 Data Structures
+# CS 3305 Data Structures Solutions
+
 - Author: Matt Nwachukwu
 - Spring 2026
 
 ---
 
-This repository contains code I wrote for the Kennesaw State University CS 3305 Data Structures class during the Spring 2026 semester.
+This repository holds the code I wrote for the Kennesaw State University CS 3305 Data Structures
+class during the Spring 2026 semester, with Instructor Maxwell Bradley. Java was required for the
+class, so I used Java.
 
-I had Instructor Maxwell Bradley.
+It also holds a second copy of some of it, written in [Compass](https://compass.pluperfect.dev), a language I invented, afterwards.
 
-Java was required for this class, so I used Java.
+## What is here
+
+| | |
+|---|---|
+| [`Java/`](Java) | The coursework as it was submitted. Nine assignments, unchanged. |
+| [`Compass/`](Compass) | The same assignments in Compass, a language I designed and built after finishing this class. |
+| [`Tools/`](Tools) | A script that regenerates the browser links below. Nothing in the coursework needs it, and it can be ignored. |
+
+**[Compass](https://compass.pluperfect.dev)** is an introductory programming language that
+compiles to CIL and runs on .NET. Models with single inheritance and virtual dispatch, structures,
+enumerations, exceptions, exact rational arithmetic, and optionals in place of `null`. There is a
+[specification](https://github.com/mnwachukwu/Compass/blob/main/docs/language-spec.md), a
+[playground that runs it in the browser](https://compass.pluperfect.dev/playground), and a
+[VS Code extension](https://marketplace.visualstudio.com/items?itemName=Pluperfect.compass-editor).
+
+```
+compass run TestLinkedList.cm
+```
+
+Naming one file compiles every other `.cm` beside it, skipping any that declares its own
+`Program` — so one folder holds several programs sharing their models, the way `javac *.java`
+does. That is why the Compass folders have the same shape as the Java ones.
+
+## What is in `Compass/`
+
+Five of the nine, ported and running. Where an assignment had two programs, so does the port.
+
+| | | |
+|---|---|---|
+| **1** | Classes | `Rectangle`, `DailyTemps`, and both test programs |
+| **2** | Recursion | `Vowels`, `AverageGrades` |
+| **3** | Linked Lists | `LinkedList`, with all seven required methods |
+| **8** | Hash Tables | All four hash functions, including the Fibonacci one |
+| **9** | Graphs | Reachability matrices, all ten metrics |
+
+**Assignments 8 and 9 were checked against the Java rather than by eye**, by running both and
+comparing. Assignment 8 matches down to the probe totals of all four hash functions — 214, 112,
+103 and 113 — and the same two keys that HF3 cannot place. Assignment 9 matches on every one of
+its ten metrics.
+
+A few things read differently, and each is the language rather than the port:
+
+- **There is no `null`.** A linked list ends in an empty optional, and the compiler will not let a
+  node be read until the program has proved there is one. That is the `!= null` the Java wrote at
+  the top of every loop, checked rather than remembered.
+- **A flag beside a value becomes an optional.** Assignment 9's `dataEntered` and Assignment 2's
+  `classGrades == null` were both answering "is there data yet". An optional answers it once.
+- **An integer is 64 bits**, so Assignment 8's `long` constants are ordinary integers and the two
+  whole-number types collapse into one.
+- **A grid is `integer[][]` and a cube is `integer[][][]`** — a set whose elements are sets.
+  Neither needed a feature of its own.
+
+## Run them in the browser
+
+Every ported program has a link that carries it. Compass's playground runs the compiler in the
+browser with nothing behind it, and the program travels in the fragment of the URL — the part
+that is never sent to a server. Nothing is stored anywhere, and a link keeps working for as long
+as the page does.
+
+| | Program | Paste into the Input tab first |
+|---|---|---|
+| **1** | [Rectangle](https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCtVXzW7bRhC-8ykG0qFOLLO20_Ygw0gcp2ha1IZhGzV6HJEjcWFyV9hZmuGtD9EnzJMEs_xZSpYZpWgP5UlLzu83O9-MpnB0dHQEt5Q41Kuc4qTwb_7NJ4qmcI0FzaF9rtA5uK4wycrHqoymcJkjc_f58g7evDn-8fs7Spwy-viHaAr3ZIte_W5tlV7B6fHpT9EUftXsbJk4Y-cAN9YsidlYuMJPFeU5vLeY5lRHU7hgVitdkHZzgJNoCjfGOkrBGbF8aYo1Mkus77gsCrT1HO4zgpSWSiuJBMwSEGwPVVSYlPKAXRRJdJYwh0qlLjsL54zUKnNnjcTQg0SP2il0xFApl8EJLI1tDADqtFWNvea6XOQqgWWpPTTB9cGrqEPHZYrjRv0cTs423zfGwgfSaW9tn-AQVuqJ9DeHF0CZDQF5IeoBes8j76D8evhSPW9qIzrvvg_xF3IPIjIAsFaUp4OA9nW1A4lnvj56md3Ovi0xtITjvi4s4Uha8PqfuF2TVQU5suO-bzqx8QBO4XCjuq_hdN9A-jb8joEdOp6B0oCQK01xp6E961QZOnAGEsxzUJsVYue5pI_9xirtwr1tP4ud7UQmvRRM4NCLwCFMQLE_hzx7PXlEotTKST-l5DtosgVCEMnUKosnuxCRk2cf4SvP4PfE7j9j8f8Zg089YoIIrK1ZWSw8pwZ4miv1kJElcBnBb_gkxI5px3J3CWpN1tfH2ZLFywdTLnKK12iZmt-zzidkqFOGBSaPgNobN2tJXdrCmgIWxmXek3firWYEidFPZFkZPQel16WDBDXYUoMp3awRo08OCqxBGwe8FjzQ29dlsSAbwzUpl5GVa4ewxDJ3M2ADun1tUTExfP7rb--xg4Ox5qYvlINK5TmUTKA0O8I0FgQ5Q0vtJZOiiFoDW98rV6j0oL9DPxR1-H0OmqrhoGqHoL8nRrPJKX6wytHB5GftBPJ2uEjFalPa0OlzmLwKUyGMFDjvAoxvCdNbwnwfN2277eWnnz6jjkLWYvBlDNpB2M7AlyL9XWk6mFzVQXEYVhfIB-LEqgUdDECfwWRwmox7-Ir_PwWa_SLYSHoGk41zpznO7N4xAz2RraEg5NKS9LusXkbTcPnauIp9DAH0KlNJNoOdDL4jT78FzD0Ze804bAaDnHcoNiN9S7Ob8-OqMqG3FJuhPa7WD9ct3cHQHTXQKGxNOg_QyzWa9vZCsS5aEgJXrykFpWdgLJxA5XlVG5cJ8iXjQsqBHIeL9s5SgfaR53BfGfCC7MlvQYALlop7Iy1T1rLuQKqWS7Ke_YXLGsa0pdbiRhizN98RrCwDgTlFDHvifC-ULJkq7WVZBvgS81xY3HOoJ21xjPxIaTC-MKUTLbmQ6xwTAouebF2GGtC111fWjWHKfm3gdh2pkBvYGsziIcqb21Rgmt5Uc6fftrif9yUW0Y1-VstGJv6I_Afm5fB_QufpbVfF81a2FYzvzTOCa222EL5gNKxIrVwrdLYh5ZFfRlvHrR3rZHz3-QL1-UTtvQ4AAA) | `4`, `2.5` |
+| **1** | [DailyTemps](https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCtVY2U4jRxR991cc2YqwhekYSIhkxrOEmdEQhREanMzDiIfCfe0u0V1lVVXTONFI-Yh8Yb4kqqU33CxKyEP8Qlf71l3OPXcxA-zt7e3hLePpZk7ZWkeLzL16xk-vN8BHltEU4XPGjMHHgi2S_LrIewOcpEzr8uuTCxweTr7_9oIWhksx-a43wJxUVl2_WCsuVjiYHBz1BjgV2qh8YaSaAudKLklrqXDGbgtKU_yoWJzSpjfAG635SmQkzBTY7w1wLpWhGEZazScyWzOtra-vdZ5lTG2meIOC6BpyCUPZmhQzuSI9hhSEpVQgtkgQs03Uy2RMaQPGXs962tR1KmK6xQRc40yKmG3G2LeHeU7anZiIoSWkiNxdLgytSH25dLb1cdA46JUw1KrnCUGwjLTzNCHrkh6DC3eQKiblnhSxmIuVxkJmBC6iXq1MUcbUtbYxLzmlMRQzibvHBBgWUmjDhImwUz7uYCFvSGmn2mzWpFEkUlOlk2dZbtgVT7nZ2EhZah3YWOvrlAyNUSR8kUCT0WCKIKTBhgxYJsUqasa7zq9SvoBOmKIY2lgCfLnEW7bRmOH3vke0P0Y_wGkfP1MswqHy6YFPf57kqrz7XvHwdGGTXj7nzszX4-30ztk12RBTaLohgdhSoUWbqLxTpmHqeBROWJOC44GPBUuutIma0S9z4SqiQbNhzZJS66iK1SRcR448mFVfH7uvScSVuu1YPpFLictrHYBjvPXYET7cidnGEXsacukimDjREIdJlMxXCY7cS49gdb2hfursCSpKV7tjvyBjIy8DR-nAuCyYpss1FnxZSeLlDBNXbdWbFzMctShSQ_elFLrErKn6uJK3WPLlE2D9IAtkTGxceaIgRbiiVBZYKqLfqogHeL2xFag9IguZC2MLu6reXNiCPjxoAVRGXwH1PigdNkAIMl7lDJPjugGkUq59PzO-cZQAtHDhSxi8wOHBVkGVOv3fXewft0QaIJVHa7G270L2t59C0bLllR2vYCojbTz_7AtiKuX2jWVskViwTSFhOLVg862kRu2z19MBWmmhAzZLbI4Z9pELw9MGeNGJDWgLwppd_BIvm-dg5XIL39o8_0fINia87ZqVoXvB7ho0nxU3pEE3pByLXRVxo0tujqvpYzlkp0aaZ91jxibwJ3bDUChpyEGAgpsEdribpdO8883e_kTvROVwRsI0hAwDquCxScbQstHwCGsWu3bKNWKbepf5v_74M_Qn7nt0MFIwK8W7h03FiXMr7NvtqDvxk6ck_kQKLVOKHIg_c0HDRk7OWTy8myJ-Ocb-ZITdNmFGx9vJfkLB0K3xAOs1W9hRFccUB7-5ccAYpMS0wY6DdgdpNYZbg7eBDIuH4Z2hW1P3YKegBivIrL3NmRO-W0RFwlMKIh49vPB6WihWOoLkqdCkzLCPfhcud4rA3-mivD25Hc4ugG4lnpM2_9VG_D9eiS0sWCu5Uixz_G-wthdo4pfhcy_kc1BR5oxxsd1dyy3XLnNfG8zYrpn-O2Hc2L-7Xjln3Cggup5aNjxcqz_cX5wdlYhd9KctjrmG40QCBUO80Sdi8akPazh6kJS1Gf87Y-bWn8Z25_SPHsSjYaADLJstS4yMTCLjRiebNkOxxqNml3s-i-UW0rLXce1jnl2RstO8XIbCGNHoY9d7WG80Nhvu-_4zuhpG_2OeztvbRrWA2AQ2va02iWd0MSy_97tYl8cG3K22RmKRMLEiDCezsJJHUYSjmV_FR21W312rMUMnr--LqXTAErm13HcZEVTYcJ5gwyFarv71yh8U_BuEf1nHzLW8Rit5rDgen7Zv7E_hlCA8re2v4xhcjCEVJmEdFdIkNre5Zlep5ZTe2v-LhBm3pDgF_nbrvwN1X20hd2fwvgoOzCoArHQLYLuVWpnoA9O_sjSnhpKGvVdlRLMgHmSjuexKW9Ds79ynuh7PQS4IPbrm8uXd-T55eLT_DQGtk2ztEgAA) | `31`, `45`, `28`, `60`, `72`, `19`, `55`, `2`, `80` |
+| **2** | [Vowels](https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCpVWS2_jNhC-61dM7UNkrKs6dtuDAzdJgwBroE6CTXaLou1hIo0tNhJp8BHF_74gqQet2HGrE0XO45sHv-EQ7rCkOdTfCrWGuwrT3LxUJhrCTYFKNcc3jzCbTX764ZFSzQSHyY_REJ5Ilq3-41YyvoHpZPpzNIQlV1qaVAs5B3iQYk1KCQkrfKuoKOBXiVlBu2gI10qxDS-J6znANBrCg5CaMtDCWr4R5RaViqIhXClTlih3c3jKCV5FRQWkwnBtvW6l2Egsk0jlKCmDUmRUWL92N4osvrXhHvoKGY9HUYObcU0bksD41mhYwOSiPVLaheROHv16AYPBRdRKFEJsocpZQbX-dwuYtaf2qzEkD5JxvSJu4lGgb78hXHOgcqt3gFxVFooCnTcWpeHcehZGj62rNAfimZeow3brCncwg0yQSvbMN3E1QL4QZksfczxK7mU86wNSFdNp7hX3DuyXoiI4n7_bd00iuBIFJb9Lpike3HJNErBO4xwGo4uDavv5bYxYnB7gYNBH2AKZHgbC1qHR5Ma2CfwCk4PC75D_xjjFgz-EAbIRUNZE8JcewKfQ8pGAjli8M-UzSRBr373K2juqb79PbdFcBN-cVhz6PwKACkX_B9nS9UhTqTGsmVQ6OVYv4hmw9fuKZLRGU-iPS_L-hpzE9ooFy0Bs7e09Baq_5Xs5Crfsne3AH_BYJx3ojVLjKENpsd1S1jq3Zho-8aZCfnKm_AUtkXEoiZtkn4MCNvgASRDqAZjfN9_qenkHq9u7r-3O4GPN8wTs7aoL4ot-QmWaOC42moD32viE5iyB2zemG676WPrYYUMmvglqCB2jHKjHsDXUFeazqKBEvquBA0pLsq5Qmt702M8TyuB5BxpfHOtygoK0IzJ7QzQrKem650pSifJFzeELpUYq9kpjQF97bCcboHqhbO523dVqTDIF_5hsQ9kYkGfuXJLqSFesW3BWNkeeudEIyIXOSUKKRZF088MJ5qiAizrGZmQwBVWO2o2ObvTpMBSrPO_8aWFvygvoXAqzybuhcrVjVGTKi_abwebTmg1q0AzYtvlDMqtHrPUYjOS126h5e7HoEbfzH87pPiGlOUpMbYJ9thfe3JO4aQ5UPPpz8ve7SW-T30g_mmdFOj4PZw9bt4y8VC6C2HkYHcB3foS-rY_Rcexe-YTiCf7JyTUHBolgCtCXaGxLRKxuH0W-Vs9CFIS8K1ITX2ciHfVAprY0Z9dnIGS9vg3Wy2B9H6y_noXJarcxEKFgzYK1CNbm7L-k4hqqXBRtm-rdliztjQGflb2YgqcUvLXs1ZGG27dWEvbuZZeXvedT_xF5CRL5vdH9xrqsPfdfN_utxYX2cslnVN-wMBQfaqy-i8Md5A3VVpInsffkmxzsI_vnHs7Rv5LxxIcbDAAA) | `1`, `Education`, `2`, `3` |
+| **2** | [AverageGrades](https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCs1Y227jNhB911fM2g_rwK7WubQPNtxsGmTbFE022KRdFNmgmEjjiAhFGiRlxS0K9CP6hf2SgqQulGM7u0-tnmyRc-bMhcMZ9eESc5pA9VygMXBZYpIVj2UR9eGUo9b18uk1HB6Ov35zTYlhUsD4KOrDDam8kb9eKCYe4GB88E3Uh3OhjSoSI9UE4ErJOWktFVzgU0mcw3cKU06rqA8nWrMHkZMwE4CDqA9XUhlKwUiLfCrzBWodRf1-ZJXcZAS4JIUPBA8KU9KwUPJBYR5HbsPHjBSByQh-xCVCRjyF10yY2ztIrD3fe6EZiILz11AIwzggaPY7QYkaFGE6ApMxDZnkqQYUIBfWZOROgSYTOxopm89JkUgImAaToXFqE5kvGCcFJeMchDTAya9UfO_JKalU24XKAgefobNoaT2Q0QrQW6MI_vnrb68go-SxtbBU0hDcryBDkQJqeB3a-aoyNLYO1BkqSiGXKXEbE6fUaZ0Xwof1ApkY7EV1TJkw9EAKmFgUBmYwnj5bctqurfs2Ld_eHYd-n0bNBi7lAsqMcarQX83gqFm1T8UwvlJMmAsSxWAvkLdPH04EUL4wK0ChS0tUO894RFUIYVNSFmZkVSUZkEh16HP3u8QVHEEqSccd-NrqmsgHwvTc2zXYi9-rwdE6IV0yk2ResLNgnwQ1wf7k2Xt3vKTQklP8UTFDg96ZMKR8tK3zXHpOoLc33SgchmAr1_E612eRclpSmMEff27Z6mI2lwp-s8GuMrjRvlHEecXixudCkzKOx6ZNJFKHH203sTm7DnADR-fhg80eZvMQJP4B9S_ICwqSfbtjHmrFIUIlvsVVHXexL3LXznxwVByoNkVKwkBvJ5B9hjBgMIT9PRhCD-QcejAMkmYIPZ9bO4G8D27Z3UtJtg2gCfDGRa63O6TjjJ-YaByCwfEYwZwpbeLejvxi8y05c_i_yZkNtv4qCyBrL6VhOfhkPplOIHf4_gVUz9UjRrszqQ79aWvVtbEX_8CD7H0ZCwdT3-iOwOdTeMdEeuIlK-UjGI9gvBe_kypHM-i9O-ht4_PfJVxKcyy42ZpxW27DF_idiyVylla9ykuk1l_5eyvaXos3aKzCAPRESeGaB23kYkFpo9zC1J2Fh-rDW13kOarVBByUv4xzZAJyEkXc7UaCm38Hk8DUDTS_qp-Lk_NLuDi7_Ll509stuR-DLXBByF8QOOgI-JR8QeQwdi1uYeqbvjoKL4gdxXD2xEzdxezevW2xTmqfMiCK_J5U22VsiF6_AWrDGHbkcu7C6ZH0CEqpHim1_ZdtUEvkj7Yds1tsF91m11tFOapHPYEPlBRKsyWNbCtrd2IzHwDqR0pjOMMkgwQ5B4OPpEEKglyqWq-twdKKNvB1H6iLHGyTbDtlD65IG5Bi6v5wdH9sZ79ktloHBEWR60nQxbeN4lsmUnqaQCZLmKMC5LK10Q8SjisLZXSRezQjDXLrN1qSWpnM0rynuXRdP9PgwAPBFSOeVkxyQjECqWDs-gGsW2Hn2yBeipC3Zyqsmu1tZe0bBe1-Sk_tX13kwUgwd5vjU1kIA7MZjDvVxBEMB4H1MugqXEpP8O0sAOpgOMLeMzOrfLpBg19-E0BsV-klNl0btdmWzxD2Ry5Fhg701r29-6xSdtNOd0wAAmeCRqBpgQrtLHu_Ar3ApE4b7S7MNiTP79I2MEH30MagAigVM4YEzKDXW5-syB4S3ywyEaJ0fNki1L-GlZDtFHvTHTeCd2ol9kUV4wTKTPLmuJrVglJgYgR4r-0xl3akbqc4OxGrQtgqsrFknFiphMANydX8Z5lUxciBjNwgjpAzbWvGyJUBf4ZE4R1mZ3INrM1E1ID2rZYCjHSXmx_83ditkGlKAasjvpBMGGBCG_f94J4SLDQBwnWCQpByVgjpDngU9iAOGlfT8DuD_WLQnVKr6dbNEkYTnweeOHHp5j9AMF0ZWvk2sQdDW1PG9QTMNJT1t4qaXCkLbsvi0l7FqavjrOPssOx4aFd4KoOaiPkACOnLsfN8pxJVaX3cpn5nglj_eHAMCsX7IjjZPvGPq5yZNfeZhem01bZKSeP3bevbfQavq3hWr2oulUtnFWiFGN_Ihv90_XR4kXAw6h4R-899jYn-BaNEJl2MEwAA) | `1`, `3`, `2`, `90`, `85`, `95`, `3`, `4` |
+| **3** | [LinkedList](https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCtVZzW7bRhC-6ymm0iEyIquy3RSIXaN1jRZNkThBHLTnNTkSFyZ31d2lafXUh-gT9kmKmeXPkhJl2k5bVBdL5O78fPM_nsDh4eEhvJXqFuO30rp5lPGjz_gZjSZwJTI8hfLzTjgHV4WIkvy2yEcTuEyFtdXry2s4OVm8-vIaIye1gsVXowl8QpPV96_XRqoVHC-Ovx5N4I2yzuSR0-YU4IPRS7RWG3gn7gtMU_jeiDjFzWgCF9bKlcpQuVOAk9EEPmjjMAanifKlztbC2tFoMhkRkwtIGRRIpXWgl1AkOkVQeXaDxs4g0WlMUigNTsgU1loqh2Y-4tufEoSfxZ0AVDHGIJ31dArpElB5ms7piEGQFpRWCPRjBlaDS5A50xuhQK8JBJGCUDHgHZoN0y9EeguJsOA0rI2-Q7rnyQlQOka4waU2CAYFi0k8_vrjTygSGSV0jPi8cJit4YtzlugFPyKhPQejHYJw_NTpNUGAIkog1Xo9A6ULiBKMCKGbDR-KdLaWKRowgoQBlwhF7xKh4jnBmukY08DXPFQT-M7mWSbM5pRhW0pjHeswA3FjUTkSOsUSGetIeszWbjPn-1c6xm8hQRGfbRO8iOMaEefBRRWTLhU1T2Sd36QygmWuvNNdxPFbYR3RnpJdV2ggFk4cjConlEtQmtCRdk7M5z8J-4tIc5w2Z-hTH4BzUFiwuFMmddY6t5GYxs0jklIuR_XvK9aAzHUe8CwZnjXnyDoVXpit5wrvXa9oJbn6XE0ulIIoNvTrwz3q0I0KxUHmWBqt3CCD_EiOscciDNHSoE12yFaf4gOVBjWSjcqhvfjsY_USDgSs5B0qWGsr6cK8uiBVjPenUHCsUujmDqSbQaRz5ShMl0ZnsOiF4MK9IQo1AExvBr0eyu_hG1h0XNLoghFiau9z9375UagV_nAfIeeb6dg12amkMoaX_ttBv5fWLM_Pt3hKO28Z8Wkx8C1EuTGUFHZar0KCAYVzWOwOjZJGEBicX_2tb0odDuGoJV3DuLpe3mVvamtS8fd_X8LRvpgqU8m2UE-xWp0ibULlrUzDQ4zH8UNlDc22jmfPCTNPtANT8PAxofYRM32Hvn41pWJ3xPizjcs9JXtXoPegzIVovAfVMJ9sJe4AkuFap2KA0nX1-i909i7CxtlfrUqR-Oj-UhWgGDSrV9rr-PhS2gQzM9-fJsLiuFfM7RQxtK6G5_fpONxNhhcj6gipP3QaDBMYWJA8t5016b-uQv-Soz9Q77byz3P8dEccPbHqdTz4SaVvt18_t_TtTwH_cP3rhGBv8A8JxJ90AZlQG45C24wuVPRsK5oq29VRdUm4ke1tmLvLU0TkWv6O3sgDGqNh3U8L6IBH_bVlxsc0Q9smZ6-vKfeCOakvNKj-aqQL0bwR0S1lLZ4h5g2L7wxmwtxaSohRbqyklCb8RVFvAUDYW4zn8ANNtZFIUxqWo6RkQCKVM3RhJOXCmrxQG5dItarn9fIAJGK9RmUrVkTTQq4KSQNwoFU3kX4wUrk36iPN9zY0R1AG-MyPRmfT2rqDSkIXMz9vOc3gzfvFIabTg46LdQfQPYNnj3NdamV1inMWa8onK8ehFhJewhgAxp2cEk6qD_jZYESo4vkaWW1W2KgglpQ1aCrruBfRsYkwGHegYqt4gGhzs9Vx0cM-PB6oATsdgOmFMARotfFtndyB78C4u1DVJsavZZba-NrIeHn9dkVfsOKCQmwISwoVgtzfb9ZbsTQYuXTDMUWmkRYyQXusTU04xigVvPqTjq1Gm6XyJ9sqV07nUUJB_SmRlmgUSbnC4m2cFTKm6HzBC69WTJaW9Was7Vs1X504oJXdWSejNc_2u997hXBHJgGp6rCcsT717o-ASoQjr4SlTlNdWJClC_otGslRC9ApJWTos-7LUnAOmu67QN1guyIdZju6cHajc37b9tta5eoBSzoaBV8nft38Ca37x1bO_891M0FCm9yVERnHV4BPZ6Ucl_teaX13LiBDlZcub3KqP7CU9xiDxd9yVBF5mnUo4rpg6dzx6onrgnd_kaHPguBk5pNiRPtbv0IGsRJEJFjCOojRRkbeoOXtbhlA3j0_eE285LV7vRNS7axunqRfJzRPW6NiK7G9lQqn44uYo_9oMYPjxQxOFsGK9zQsIbxWDFe6R4t9b4_3vj0J35Z6zq8TXUzp6DCRX7W2nztlbaaGV8_nd_SKJkHf2x_vZFdNccczOHoOw8tycDzllpuphw0t1x_uicd9RYvp9HKZjt8oML5ROoUtTbqd1AM8niCAV5MnO0K2vYbahnbPCPhYaFs86yVQH8tmAfSZOFb7BO9FR318K0c6eo7X2lvePehymwCvZ80_rvxoj8Zr3uzZzGZriumI9DoQKRIuSnonScD-ptWLCGBwmVuMvaPj_B1aK1Y4PehMmJVcj-vSubvRBaTatzeyHBrrVMpQdhLoQV_IQE-gVEl2j57TB8L4YDwkxtrKNw3B34Ag_rp_HgAA) | none |
+| **8** | [HashFunctions](https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCt1a73LbRg7_rqfA2XMTOaFViRQlyzlPz03ica7Nn6vd9kMm11mRS3NjapfhLi2rnc7cQ9wT3pPcALukKImS_0za6Zw-OAq1xAJY4AcsgH14y2b8GNznDTMG3s5ZlJbX87KzDy8ypnX184sLCIJ-CF_BBY-MUBL6w84-XPJiVlM4Y1kGft8PO_vwWmpTlJFRxTHA-0IlXGtVwDcFizO-6OzDqdbiSs64NMcAR519eK8Kw2MwCum9ULOcad3p7O93iLQqC0iZTiEpJe2vQd3wAhgk4pbHoLkBlUDYh1KKzyWHa77QvQ69fJlyMGyacRAaVxRqrnGxmSuIVFbOpD52X6APqcpiDSYlEpBnLOIxMAMmZQaEjPmtB0zGRNm9NHAvpWoOMyYX-DwTGrWUF2rKNQgDRqlrMMpSBGF6cGp_hUiVkrjvw4wzSZsTeWQgYzLmMSgJwuAOM26ZgLkwKUhlUiGvQEjieM4WDZn_wW4YXPPc0G-ZklcQKakNk0YD0_AEHz2BKY9YqTkwCUIa5CaLkTAJha_OenBKv_ErXhD1lBekzNEQpsJoD7TChfahkhzmqcr4oSxnU16AWeRInWhBLLQR9gjhSnENjJje3-_olBU8hpmKeYYmc1WwmRVmHw4PDw_hRc384Zf5VNT_rsvZjBWLY1LbDoMiCVhtuaBzHolEcN0jSk5FHz7Ct7j4BH4d-MHQgyP6Oz4ajT0Y9PsTD8JhcOR1KscZBgPfg2Do9z2YDI_G-PvgyIPQn-Da_viIaEw8GPh9fN6f4N_BJFzSCAN_4sEwHAYeBMEQ9xvRqiHSDkPcOxyNfQ_GE-Rm4IdDD0b9yWBJ42gcIB_9SejBYDIOPQiOkF4YHlmeJx4cTfpjD4b9yZhWjjzkvt_gw8ddJ4NwhG8jpdFoHKD044EH4Rilm_hHxGtIz33fg6Nx2JAlCJDGaDwm3eHa8WgUIh9-8NvzzVM7r_xOZ8rYQ7L-njLtwTwVUYqGWbtndZQFB1bwlbODS3zxQvzC4QTCfrXZfs1by67Ox3OmraeRkyIrwMiFZ2wBhl1zmPJEoY8Y5OZK3HAJZQ5KOp8l8gWfseJaH8NPwqSqRBoRyz1gtA36uuafSy4jbhEpWkQZR2kKVV6loKKozAXaL6libonU5CMETSSy1NHc-jtHNOUy7sH5WQARkxCjTwsN85Rb8NGG50BeqhF3GaJ7TZngaElVi1-cYp3uKv2-Ybfvrb7u0u-3sjTpEw2zMjMiz0TEjLjhNYR5kGRKFV3_X4EPX0GeioNWPeapACFveKEJnZDFmdIGRFEwRCGWQYVTDsEqOIOkYJFbkrPC6Jq6SiquFqjM6QLPVOcFZzGwqFDa7lMweYV4AfyGy2yB38hKqwOMmOxZqIgypXlNXki4YVnJCfwhYQUw3L9Vn6SlChnhBPxROBwG4Xg02aXbU9A8UjLeoVxVwPnZ8Ik99lbNvuSZmPKCGZ4tIBZJwgsExaRQMxIfAwGbqhveg9cJPSELKjW3oUCzGW9YZrUzhmXyUIqiMSqYWcfKC4Hs20TA2m2iskzNa3IuolYarqmjHq8URtGaaKs2LwzP25Q52KVMDBp-31mRxtMbYKAfTqyHkseAVM5jrKeE_VaVnkKsymnGD1FEcnbU2I3Q6H_oohbjKiQpeM6ZwXUK7WtOBlwpekX4Vc9E2INIoT55D2Oc0OCDETOuIQT9ucRITG7ALAefS5ZRoKvQAETDG-KY9pCEeM6iOEVP-O-__7MEYL9PaRdmFC3K__ARfmSZiPEMbPD0AAOEBxj4Bh4MAg8GGEInHvgDD_xgGTJ2fPyxBxgbA6SH0REjF8afAcYuD4YYzyZtceWS0qY5LyDwXaKDbpGXWUZWuQ4QgHitEovVcRmZ1dDyHZL6Bk_yBIb-ZDgZjf1J-Hwlx7kkM6fcB75gjlNlzfCGCdk9aCCNZS1KlYgw5FWIjJ9MqXxFwS4p670UOs_Y4g2XZfeg8YKV41QCn-VmAUxq1J0DXSHz0kBRSkn2WpoqMnPp8u1KbpfJQgixqlKrGiYqRitevucsfm2l6B703hXdcJ0jPRcmSt2bGwYTMc1hcNxqSLVhfvhIYLbc9S2fU6KA4re9Wa07Pxt0leR3rHL6tBSV5B7snZ8NoPtS3NhbBEHGd0JyVuBLmAYc7K3LWUvj3y0NYuxjpPG7Zq4eIo2ZK5LGX5fmnyWLMQBH9xAouIdAacEfd0BBl959kFD4AokVrIv1kuAbzi1875BpeLdMCV56HyPSsIuvPkQiXE8CDaF7YcoY4_hLjvccHsP52Q45wnY5MIiqjPd-KoThaLndvVe3gkKVc_NeK82YJ6zMzL2JvpY3GDNA5QhvPXifceSKS8MLDMMuLQ5ptyYtLmOHDPXjUhqR1QhzAmGnWljB52aIIFZcVsmEhBmXZW8VclfQsrNdlgaDLYISmL85ff0W3rx6-8O9oH9vN8VBD74vJawizYybVMVbAWcHOb8i528h1-7xOygGFcVgC8UWZ9tBbliR22HjO14Pe4AWXJnv1tXdvVdkfNYiXVZ4DNX63eZUx07K1Y6b1Sp7l8Q8izXrRh5MlUnhF16otSIEIkhlg0vs6LSiJ2WGJ_Drb2vhn_KdnzEvcN5RoUd9TV5xKqLTey01L0z3174H_d8aakLRKaeonywExxITvrVVO20Zd8Pr6GUPv9oSmFEGs7Glgrbk2ajM1ZKbzaznTLvLcCKyjMeUwUqM_jZ1xSOh24nQ0KcUWSyv1wIvxpolNn8xCjRbwB6d6F6TD3e6dMe0u1jNLVekiS3O2hRppfIJ01JkBiuITQWtw4097o1D9kAbKgDYDR6PR-h0zm4KrssMa7d089uDZ444PIO9491etfPHytbesxiBPua3ex4cHSBZoG1WFnzLF3tYXjtYscj2tbYCQdTugbpboHXTUcS9HcUdAhrhCeAue8_bfs-rSolbsrJGJFb_H8THD_2P8JcT6G9ETbcBKqCxdjMxWG60snTwcTNoimSVjRattWgcHwgPRltO75ovNs9u6_lZbtdObxNdHniej_WEi3KG2GAhh-o2pMgGzxflzFpclzRrdWCF6N1r53vCors8VshHYaNRNMB6vr23krpZjI2Fsr22807yqiyGlo2l0znPMmBrWBSLuGcvtgh-U24ML1orK_UbS2VsgNPmvVSXs5ZL6QOd7T6OYjfCv3eb_13xTJez7bG-vuWvdbO-SCejtUx9NvBc56Ulhcpsjudqy62mcFmVtG3fSSybYzMVl5lar_rCO4lF67oFRqGVs6KRac_UDdaQqSWFodUWy7F6hDUoD-YFy_NG4Y_q0qe2FKUSGFRV6NWiWqPgtaC2mCvkYlTO5myhIRFYa8C6Da_CfSoyW6nkt0Ib3R5T8Rq_w1rJJjmLUtKKkLU9Ym2303K9c6o8ofV_3TTf560v1SDdX4sEtL-VxNkukt9u7DUh9-UZDDZDQsVi1355BoODu1nddIk6LWwwRXI_375k8LHmrQXfHwCI52f-Dtv_XF9Idpn_KzxXZgxmcYiZGj5VFVLM8JD6U3SPp05jBcM-ApZ-ZfU7WVrGtGlazDW1lXtwmrsuwgbZvOA3QpUacqUF2aGQ2mCPwflgqUuWVanmFV-St32bQq1VuRv27H9Ze0YFvH6MTVdWVhO42_Tbfv8EJzD4Q71iKfEz-ARP4dM9vAM_yOmnTdp_OscJdjiO7VGA61FsDRoE15HCpgLdDFjVdKLQ565TlIrYWw52RDWM0JiDfg9-ct0MtrTrtg5k1U9xcaZqra22RRnocupa-pVH2j4f6zRzZex7FqWsC_nW7TVdu6fUb7FTKk0ntyMi2xwt-P9wtKlSGa-FhRMwRcm3Xkh2O9r-MqVwzSzqSLNr7CzhrIzmWeIux4U2y1Sit91nBy21xFpnPpxA0IdD6FqV-WFLbbSWLGGZ5i3k6syTwAattFJ93dPeUtLdAhmpvwUz2slsavekTbsb8tiT2rZsWnB23f5z223vQWC5gjy7qIrEsbtB4h4IeD8UpK0zvdkAarnR_SApmzXKIhUaDV7n8F-8uZlGyttaV267IzwIfIcenImpkiyKRAWzbdCLrBRcq4xa985L9FZAJpBZDlTwGCcXqjGLqgH_3E2LNdqeFWq6ruYyz3bd5o02aEJb2X5yY_7CAx2xjMc9uIhYZsdQlOYrCl1iPfapbUgwKzeQhnh1lHEJEY0ARGqWl4ZmO6zOWGM4YTlmYMcQFNb7kYdlha-m7veJuK465XWkWTa1r0pWMGk4rzuY02YQwmmbZt9-W5AYftkg4eYk3tvjQujBN6fCzIW2k3gVibolfQBPl3SbIyXtYQJP_D0e9cn6Zjt32R2aujXVp5uoeAA6FYkpxFVqIPDXQ89dV6T7xqZ7BRS0iscqtzlh8nznDmcFi7Am0djsAcpdp1YlDd2a9JKn5dhF7wUWjjZ0vYtwo0O5pPOh3vLjrkj68yMjaXUlxV1-zxj6pwiOf8glwNWl5gr0DMe4U57liF2Hv1td6pLfGouoOmcRJvS2HkkFPTsiyQxgO9fAk7mITfqEZpi3Rjcad54XynCaVnST3XaLvBDSJK57llCVjkj2qklzjKjU5lmOFLkhwJzFVDUVGmIMEnQrWRlrQn3ZbLWmS22kWK2Pmbmyfo38WMx2zwy_NV7tWETkoLPeDrAqOqHF6zVRe9O1S6wbw98snRVTqWm4la5Ztwd79-jU2Xfu1ci0I-DQGAGPQUgP2FRjHFZ2gLUaC0Ltu3vXShfz66WuVgZ91gvFX-Os5buygahWZV-7nU_qNA_JrAwtiYQG12hd75zpH7GC313tRFjp17dYd1bXzSRCjkrvUq0MJ_VbC_r4Pxp77_wPkm_XgZQxAAA) | `1`, `2`, `3`, `4`, `5` |
+| **9** | [ReachabilityMatrix](https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCsUa227juPXdX3FgP8RpHDVKugXqIJh1s9PZFBMnmEm7QAOnoKVjm7FEekkqHu-iQD-iX9gvKQ6pqy35NrOoHgKZIg_P_ZoODFmMfUife2YMDJcsmCXzZdLqwG3EtM4-336Gq6uL737_GQPDpYCLP7Q68IQqzs9_XigupnB5cfnHVgfuhDYqCYxUfYBHJSeotVTwZ8XCCFetDgy05lMRozB9gD-1OvAolcEQjCSItzJeMK1brU6nRcA_KLaYgUIWzNiYR9ysIGZG8QC117I7BhByhQGBmNrNXMOUv6EApoEJYOErC1AE6cEvMPA9-IuSMXADZoawUHKqWAyBjBeJQW2hfoIbGPhwBoNLOAPP8-h12IPlDBXCYE630OH5uZllgBdyiQrkBAZ-D5gIIUTF31CDQQExEtYF0lPFQ7DAuIYTLgxOUT2Pnkcn8N9__wcYaDSwnEmNgBESuzQwhbSs3Q4ROvTpVvvNQi6Deh6d9FJIcmJv1B4MkZsZKhCIIYbAYILMJAppCzca5FL04YTwiJEJDe0MQLtnL6B7uYGACRgjaMZDMEseIEgFZqYQwfCYpNPptGIZYuRk6OjuwPc6iWOmVn34US4hZmIFQobouOkEOGPas7sXyTjiAaQUgbjeBPI0ww0J90jy3MCSaUBhUGFYB4_4A8yvA8rmKUKEGgQyESbn9_ptFdCTRDgzsTR3c8x7a5eetjLrMTOuPQE3RF1ljflwY9GjFRRhDnsT31Sb5MQx0Sq_5r9gD_AN1QoCjCL4BZWs4KpnTGFYQSxH_x-opM7RJ1gFxuUD44RHBm7g13-lbKQnknIBE6ngn3ADF5AIwyMLI99RAQNKLtdB7A-GHiWX3p3QqEz34vS68pkYR4CqoC3a2REll6VDmwdWHKPQHdlHGE9LCfrnhGw181QQJ5Hhi4hj2LMi0oaJkKkQjOKLCO2FjSqaC-XeQVl1y19jv6pb8WW9pBTqxIrKaqbnBOyU77ROdrzEdLetXjiv2_c57pCVhtKQqw2TwHojEjqnl9iHJTczCGSUxAJe7dqltwElv3G--0arFJbgZz56fh3BTfXnGcQ-vc5H8DuIL5_ntHq9ASbXha2LTRrjbmxUmU6-vWTILz75UJlMZzB4GXoFyO8VxkzNdR_eu2gAFxQ4Bi8-xSQezLKAtBHuuNEYTa6BQihIgcAmBhX5R65LHgfttzFOJClurq8wXlHALKO8qaJlJb11UfTRRqVurS4-j7KgdQO_pr6u1n-QpP1mSTsgmRnbDbmJuG_PczgHf9TLPOrpHobuTu5j6TZHeLFJwkspS3gZ9oD2YOgc79g54N32nbLuUynZ6daxrcHA97ft-Z62zXdb2iF-wFplYZC5LWayGrmVb26HzbI8Pz8_t86JMjSFPyecIqJMzCIx2n495tnUlJ8UN6iB2Tjdc6b4xqIEYSKjSC6dnRmKHAtmU9u6nOJRcWHurVV3tbFJt-EmwrUAYDcUOnIrhZYRehaHj1xg1x76rZ1-5dquQyqXeBugvVeg3kS-zoIP8LCpJMjfcXEe4pQSVjlJEyVK92qd7tP6fpsYvmZOVycxLWYhrA-zLLfFcIoaFpILQ1KSwE2dM63K-E78YC8q-89NTrTvMoR0v10rzh1iytO7JKaNTenXHl7AQaC_Z5mrrbPlfWXcHhJ323AG3Vc4A__UqkzBf67tR53EB2hDvRLIxNRqwVpUTQVM9RElm82ie0jMXrJ7yO9tEh7_JsJ7_X8KjxfCK_H5KOltseXc1ijPOScgG8VkjUUPiu3AjLNnTrgxEFKcU7UEA8sIPurlxZ912q4Qv6CC1--BlpUsKuRsKgWLiD4NRtpFW0HutvvPGE0-Ev7bdedJGhaBSOKxazcUdPctZ60QnxQLsLuW9xzJ2GAVRKitgXxhgYlWMEwdm7EdDKaavaYhPGxT5GVICe7QsdSxxAkqiKTGEJYsmttLIhRTM4MhmBkzVCspkwMnQRAVuch2c_XWYl8pmpg4iMEF_SlqOZer1kSKbvmyIQcmtohgC-cXzMwqjKckna4oOF_yVM59oTBq5dpQWxzVI0F-mHy0BPmHKVyOVcoO36JUJpoO7KF8h1C-oXJbCKfSaT_Kh1-jF-t8OEQtLIe-Wi1IHbKC8QAGfdpbMZ5klUPqKxXFyMO5pI5jUmG1O7hkym5qG2ucJ_lGvNlwKgczx3qWrcxx9Q2VFTYYuXzH1jZsLN_QtQDh6-ubpyJFcjXOic4DoeNnlq7kDHXYbytcmjOcfXOkcmZTVCB8tLsJoJN4r15fQXep08pFyoUm0q1W_7akH5sAlgu16-Pq7Qbe0S87D8hnO8S9GEWS5g4_WYskJf0re2Mwx4UBBichM-y96-KfwCRiUxij5qHbmTX8iTKYySi0Ix-5oCtZ5FJAL7_Mns5SOYJrEzmb37MYYcIC41K9MgzNVnaaIEWAdqiR9s3dbOPRDY8cBUWnlnFRCqm2LfPOYXO9IWR3U42c96-E6Ukx8X7gehGx1T2KpHu6VhZ0YCAA44VZAROaplU8q4UXiQGVCEFdBZmYLHagCHVlSkbvS7aCKwhl1qjInpySDJdPyMI7R2b31HtQ3as1pGupqtrwkhtqXFrQG6obMI3g92tbTS7_L5CxSmRF8QMzbOOiHNxlPTg-SdXpR6b_TmVAScDrT3ZlVhKSy-260-nR0-vawxhpbIRaE1TeK0WD1scICXM77Erptuo94Uob6D44ufinXrvpXhrqTRoYclXPkDp0vnBDCpQqiwcfpAzHK_TaddwOccKSyOwN_U68sYjmXJYcr0q134PLHpVkV15da8mpUb7s_GGmrzdwdVjXIGZcpK6rYvcV29uWDLhAej-4G8L9--Hf3M8y3jVnfA_erwl4x4lLz-UtWdTfsf3KAxJgJr3G3d22wyNln0tp-nlHb0fTHFm492y1Z1M3G1QZBQOaLHul_wvIGb9u29sRL5IwN3ru2tTru9N-pSuZD2-3OTS_rNjVGW_jWLQcusWRM9HXRhiNVA_8Z8odqSnT7tEb9dbaoz7UOYXSSLWR9ovTvXq4zN930ro1xtUo7IfC06VzftBJEKDWkySKVlWv45ITgct0Ni96NIffq7CQihoTiUmTvHSUSkq7LHwCjRCy7JoLkCpEteYeKuHAIW9teeeUzIWOtdHadeMYqLK9Mk5KB0j1RxlpejqMcSCEHZ-VmOiWy4OI9p1NHdyvfruXbslZu1OuNSDLKJcgqyNAllrphx8uN3MPP13q5h1-OG1aMXHE2fXWzldCGH4LLKhWVkfz4TgwjXH3kGe_qDagf9WKMIssZrWw_1nTAzbWNKyn4qGUaM-YpmSb_EWlRnxX-IqKt10313egmHhITEGrmwe-S2--yWknMJVUl1PQM25fUyqbzk3XrljPEd0uByiF4j3JtQixvRL8H_Nl-EeKKAAA) | `1`, `3`, `0`, `1`, `0`, `0`, `0`, `1`, `1`, `0`, `0`, `2`, `3` |
+
+**Two things were needed to make these work, and neither changes the code.**
+
+**The playground compiles one file.** Assignments 1 and 3 spread a program across a folder — a
+model in one file and its test program in another, which `compass run` allows and the playground
+does not. Those are folded into a single program for the link, each file behind a divider naming
+where it came from:
+
+```
+# ---- LinkedList.cm ----------------------------------------------------------------
+```
+
+The folding exists only inside the link. The folders keep their shape.
+
+**Input is provided up front, and the link does not carry it.** The playground takes everything a
+program will read in an Input tab before it runs, so paste the column above into that tab, one
+value per line, and then press Run. Assignment 3 needs none — its test program uses fixed data
+rather than a menu.
+
+Nothing else was changed. The program behind each link is the code in `Compass/` as it stands,
+less the `# Playground:` line the file carries to point back at it — which is also what makes
+regenerating them safe: run the script twice and the links come out the same, rather than each one
+encoding the last.
+
+## What is not in `Compass/`, and why
+
+Four are missing, for one reason: **they are the generic ones.**
+
+| | | Missing | What a port would have to do today |
+|---|---|---|---|
+| **4** | Stacks | Generics | `MyStack<T>` becomes a stack of one chosen type. The algorithm survives; the reusability does not. |
+| **5** | Queues | Generics | `Queue<T>` likewise. `RadixSort` beside it would port unchanged. |
+| **6** | Trees | Generics, interfaces, iteration, string ordering | The worst affected. `Tree<E>` is an interface, `AbstractTree<E>` implements it, and `BST<E extends Comparable<E>>` needs both a type parameter and a comparison contract. It also implements `Iterable<E>`, and nothing in Compass can offer itself to a loop. |
+| **7** | Heaps | Generics | `Heap<E extends Comparable<E>>` and `PQ_heap<E>` become heaps of one type. `HeapSort` beside them would port unchanged. |
+
+Each of these *could* be written today, by choosing a concrete element type and hand-rolling the
+comparison. The algorithms need nothing Compass lacks. What would be lost is the thing the
+assignments were teaching: that a stack is a stack whatever it holds.
+
+**So I would rather wait for a more mature Compass than ship a port that fakes it.** Generics,
+interfaces and properties are planned. When they arrive these four go in — and the Java stays
+here to check the answers against, which is exactly how 8 and 9 were verified.
+
+Two of those gaps were found by attempting this port, and had not been noticed before:
+
+- **A string cannot be ordered.** `"apple" < "banana"` is refused and there is no `Compare`
+  member, so a tree keyed on names cannot be written without comparing character by character.
+- **Nothing can offer itself to a loop.** `loop each` walks a set and nothing else, so a tree has
+  to flatten itself into one first — allocating all of it whether or not the caller reads past the
+  first element.
+
+Ordinary code written without a language in mind turns out to be a good way to find the holes in
+one.
 
 ## Assignments
 

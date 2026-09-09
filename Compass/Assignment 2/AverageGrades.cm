@@ -1,0 +1,150 @@
+# Name:        Matt Nwachukwu
+# Class:       CS 3305/Section 04
+# Term:        Spring 2026
+# Instructor:  Professor Maxwell Bradley
+# Assignment:  2
+# Ported to:   Compass
+# Playground: https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCs1Y227jNhB911fM2g_rwK7WubQPNtxsGmTbFE022KRdFNmgmEjjiAhFGiRlxS0K9CP6hf2SgqQulGM7u0-tnmyRc-bMhcMZ9eESc5pA9VygMXBZYpIVj2UR9eGUo9b18uk1HB6Ov35zTYlhUsD4KOrDDam8kb9eKCYe4GB88E3Uh3OhjSoSI9UE4ErJOWktFVzgU0mcw3cKU06rqA8nWrMHkZMwE4CDqA9XUhlKwUiLfCrzBWodRf1-ZJXcZAS4JIUPBA8KU9KwUPJBYR5HbsPHjBSByQh-xCVCRjyF10yY2ztIrD3fe6EZiILz11AIwzggaPY7QYkaFGE6ApMxDZnkqQYUIBfWZOROgSYTOxopm89JkUgImAaToXFqE5kvGCcFJeMchDTAya9UfO_JKalU24XKAgefobNoaT2Q0QrQW6MI_vnrb68go-SxtbBU0hDcryBDkQJqeB3a-aoyNLYO1BkqSiGXKXEbE6fUaZ0Xwof1ApkY7EV1TJkw9EAKmFgUBmYwnj5bctqurfs2Ld_eHYd-n0bNBi7lAsqMcarQX83gqFm1T8UwvlJMmAsSxWAvkLdPH04EUL4wK0ChS0tUO894RFUIYVNSFmZkVSUZkEh16HP3u8QVHEEqSccd-NrqmsgHwvTc2zXYi9-rwdE6IV0yk2ResLNgnwQ1wf7k2Xt3vKTQklP8UTFDg96ZMKR8tK3zXHpOoLc33SgchmAr1_E612eRclpSmMEff27Z6mI2lwp-s8GuMrjRvlHEecXixudCkzKOx6ZNJFKHH203sTm7DnADR-fhg80eZvMQJP4B9S_ICwqSfbtjHmrFIUIlvsVVHXexL3LXznxwVByoNkVKwkBvJ5B9hjBgMIT9PRhCD-QcejAMkmYIPZ9bO4G8D27Z3UtJtg2gCfDGRa63O6TjjJ-YaByCwfEYwZwpbeLejvxi8y05c_i_yZkNtv4qCyBrL6VhOfhkPplOIHf4_gVUz9UjRrszqQ79aWvVtbEX_8CD7H0ZCwdT3-iOwOdTeMdEeuIlK-UjGI9gvBe_kypHM-i9O-ht4_PfJVxKcyy42ZpxW27DF_idiyVylla9ykuk1l_5eyvaXos3aKzCAPRESeGaB23kYkFpo9zC1J2Fh-rDW13kOarVBByUv4xzZAJyEkXc7UaCm38Hk8DUDTS_qp-Lk_NLuDi7_Ll509stuR-DLXBByF8QOOgI-JR8QeQwdi1uYeqbvjoKL4gdxXD2xEzdxezevW2xTmqfMiCK_J5U22VsiF6_AWrDGHbkcu7C6ZH0CEqpHim1_ZdtUEvkj7Yds1tsF91m11tFOapHPYEPlBRKsyWNbCtrd2IzHwDqR0pjOMMkgwQ5B4OPpEEKglyqWq-twdKKNvB1H6iLHGyTbDtlD65IG5Bi6v5wdH9sZ79ktloHBEWR60nQxbeN4lsmUnqaQCZLmKMC5LK10Q8SjisLZXSRezQjDXLrN1qSWpnM0rynuXRdP9PgwAPBFSOeVkxyQjECqWDs-gGsW2Hn2yBeipC3Zyqsmu1tZe0bBe1-Sk_tX13kwUgwd5vjU1kIA7MZjDvVxBEMB4H1MugqXEpP8O0sAOpgOMLeMzOrfLpBg19-E0BsV-klNl0btdmWzxD2Ry5Fhg701r29-6xSdtNOd0wAAmeCRqBpgQrtLHu_Ar3ApE4b7S7MNiTP79I2MEH30MagAigVM4YEzKDXW5-syB4S3ywyEaJ0fNki1L-GlZDtFHvTHTeCd2ol9kUV4wTKTPLmuJrVglJgYgR4r-0xl3akbqc4OxGrQtgqsrFknFiphMANydX8Z5lUxciBjNwgjpAzbWvGyJUBf4ZE4R1mZ3INrM1E1ID2rZYCjHSXmx_83ditkGlKAasjvpBMGGBCG_f94J4SLDQBwnWCQpByVgjpDngU9iAOGlfT8DuD_WLQnVKr6dbNEkYTnweeOHHp5j9AMF0ZWvk2sQdDW1PG9QTMNJT1t4qaXCkLbsvi0l7FqavjrOPssOx4aFd4KoOaiPkACOnLsfN8pxJVaX3cpn5nglj_eHAMCsX7IjjZPvGPq5yZNfeZhem01bZKSeP3bevbfQavq3hWr2oulUtnFWiFGN_Ihv90_XR4kXAw6h4R-899jYn-BaNEJl2MEwAA
+
+##
+    The average grades program.
+
+    Where the Java held 'int[] classGrades = null' until a size was read, this holds an optional
+    set. The difference is that the compiler will not let the grades be read until the program
+    has proved they are there — the check the Java wrote by hand as 'classGrades != null'.
+##
+shared model Program
+
+    function Main()
+        integer input = 0;
+        integer classSize = 0;
+        integer[]? classGrades;
+
+        loop while input != 4
+            Program.PrintMenu();
+
+            # An empty answer is the input running out, which ends the program the way 4 does.
+            input = Program.ReadInteger().Or(4);
+
+            switch input
+                case 1:
+                    Console.Write("Enter the class size: ");
+                    classSize = Program.ReadInteger().Or(0);
+
+                    integer[] sized = {};
+
+                    loop for _ = 0 until classSize
+                        sized.Insert(0);
+                    end loop
+
+                    classGrades = sized;
+
+                case 2:
+                    if classGrades.HasValue()
+                        integer[] grades = classGrades.Value();
+
+                        loop for i = 0 until classSize
+                            Console.Write("Enter the grade for student "
+                                + (i + 1) + " of " + classSize + ": ");
+
+                            grades[i] = Program.ReadInteger().Or(0);
+                        end loop
+                    else
+                        Console.WriteLine("Enter a class size, first.");
+                    end if
+
+                case 3:
+                    if classGrades.HasValue()
+                        integer[] grades = classGrades.Value();
+
+                        Console.WriteLine("You entered class size:\t\t" + classSize);
+                        Console.WriteLine("You entered grades:\t\t"
+                            + Program.ClassGradesString(grades));
+                        Console.WriteLine("Class average:\t\t\t"
+                            + Program.FindAverage(grades, 0, 0).Format("F2"));
+                    else
+                        Console.WriteLine("Enter a class size, first.");
+                    end if
+
+                default:
+                    if input != 4
+                        Console.WriteLine("Invalid option.");
+                    end if
+            end switch
+        end loop
+
+        Console.WriteLine("Program execution stopped.");
+    end function
+
+    # @summary: Writes the main menu.
+    function PrintMenu()
+        Console.WriteLine();
+        Console.WriteLine("---------MAIN MENU---------");
+        Console.WriteLine("1. Read class size");
+        Console.WriteLine("2. Read class grades");
+        Console.WriteLine("3. Compute class average");
+        Console.WriteLine("4. Exit program");
+        Console.WriteLine();
+        Console.Write("Enter option number: ");
+    end function
+
+    ##
+        @summary: The average of the numbers, worked out by walking the set.
+
+        @remarks: Recursive, as the assignment asked. Each call takes one more number into the
+        running sum and hands the rest on; the last one divides.
+
+        @nums: the grades.
+        @index: how far along the set this call is.
+        @sum: the total of everything before this index.
+        @yields: the mean, or 0 for an empty set.
+    ##
+    real function FindAverage(integer[] nums, integer index, integer sum)
+        if nums.Count == 0
+            yield 0;
+        end if
+
+        if index >= nums.Count
+            real total = sum;
+            yield total / nums.Count;
+        end if
+
+        yield Program.FindAverage(nums, index + 1, sum + nums[index]);
+    end function
+
+    # @summary: The grades in a line, separated by spaces.
+    string function ClassGradesString(integer[] classGrades)
+        string written = "";
+
+        loop each grade in classGrades
+            written = written + grade + " ";
+        end loop
+
+        yield written;
+    end function
+
+    ##
+        @summary: A whole number typed in, absent once the input has run out.
+
+        @remarks: Absence here is the end of the input, not a mistake, and the menu loop reads it
+        as a reason to stop. The Java raised at this point instead, because a Scanner has nothing
+        else to say; an optional lets the program answer for itself.
+
+        A line that is not a number counts as 0, which is what the Scanner would have made of it.
+
+        @yields: the number, or nothing once there is no more input.
+    ##
+    integer? function ReadInteger()
+        integer? ranOut;
+        string? typed = Console.Read();
+
+        if not typed.HasValue()
+            yield ranOut;
+        end if
+
+        integer? number = typed.Value().ToInteger();
+
+        yield number.Or(0);
+    end function
+
+end model

@@ -1,0 +1,54 @@
+# Name:        Matt Nwachukwu
+# Class:       CS 3305/Section04
+# Term:        Spring 2026
+# Instructor:  Professor Maxwell Bradley
+# Assignment:  1
+# Ported to:   Compass
+# Playground: https://compass.pluperfect.dev/playground#program=H4sIAAAAAAACCtVXzW7bRhC-8ykG0qFOLLO20_Ygw0gcp2ha1IZhGzV6HJEjcWFyV9hZmuGtD9EnzJMEs_xZSpYZpWgP5UlLzu83O9-MpnB0dHQEt5Q41Kuc4qTwb_7NJ4qmcI0FzaF9rtA5uK4wycrHqoymcJkjc_f58g7evDn-8fs7Spwy-viHaAr3ZIte_W5tlV7B6fHpT9EUftXsbJk4Y-cAN9YsidlYuMJPFeU5vLeY5lRHU7hgVitdkHZzgJNoCjfGOkrBGbF8aYo1Mkus77gsCrT1HO4zgpSWSiuJBMwSEGwPVVSYlPKAXRRJdJYwh0qlLjsL54zUKnNnjcTQg0SP2il0xFApl8EJLI1tDADqtFWNvea6XOQqgWWpPTTB9cGrqEPHZYrjRv0cTs423zfGwgfSaW9tn-AQVuqJ9DeHF0CZDQF5IeoBes8j76D8evhSPW9qIzrvvg_xF3IPIjIAsFaUp4OA9nW1A4lnvj56md3Ovi0xtITjvi4s4Uha8PqfuF2TVQU5suO-bzqx8QBO4XCjuq_hdN9A-jb8joEdOp6B0oCQK01xp6E961QZOnAGEsxzUJsVYue5pI_9xirtwr1tP4ud7UQmvRRM4NCLwCFMQLE_hzx7PXlEotTKST-l5DtosgVCEMnUKosnuxCRk2cf4SvP4PfE7j9j8f8Zg089YoIIrK1ZWSw8pwZ4miv1kJElcBnBb_gkxI5px3J3CWpN1tfH2ZLFywdTLnKK12iZmt-zzidkqFOGBSaPgNobN2tJXdrCmgIWxmXek3firWYEidFPZFkZPQel16WDBDXYUoMp3awRo08OCqxBGwe8FjzQ29dlsSAbwzUpl5GVa4ewxDJ3M2ADun1tUTExfP7rb--xg4Ox5qYvlINK5TmUTKA0O8I0FgQ5Q0vtJZOiiFoDW98rV6j0oL9DPxR1-H0OmqrhoGqHoL8nRrPJKX6wytHB5GftBPJ2uEjFalPa0OlzmLwKUyGMFDjvAoxvCdNbwnwfN2277eWnnz6jjkLWYvBlDNpB2M7AlyL9XWk6mFzVQXEYVhfIB-LEqgUdDECfwWRwmox7-Ir_PwWa_SLYSHoGk41zpznO7N4xAz2RraEg5NKS9LusXkbTcPnauIp9DAH0KlNJNoOdDL4jT78FzD0Ze804bAaDnHcoNiN9S7Ob8-OqMqG3FJuhPa7WD9ct3cHQHTXQKGxNOg_QyzWa9vZCsS5aEgJXrykFpWdgLJxA5XlVG5cJ8iXjQsqBHIeL9s5SgfaR53BfGfCC7MlvQYALlop7Iy1T1rLuQKqWS7Ke_YXLGsa0pdbiRhizN98RrCwDgTlFDHvifC-ULJkq7WVZBvgS81xY3HOoJ21xjPxIaTC-MKUTLbmQ6xwTAouebF2GGtC111fWjWHKfm3gdh2pkBvYGsziIcqb21Rgmt5Uc6fftrif9yUW0Y1-VstGJv6I_Afm5fB_QufpbVfF81a2FYzvzTOCa222EL5gNKxIrVwrdLYh5ZFfRlvHrR3rZHz3-QL1-UTtvQ4AAA
+
+# @summary: The definition of a rectangle.
+model Rectangle
+
+    real width;
+    real height;
+
+    # @summary: Instantiates with 1 for width and height.
+    public function Rectangle()
+        this.width = 1;
+        this.height = 1;
+    end function
+
+    # @summary: Instantiates with a given width and height.
+    public function Rectangle(real width, real height)
+        this.width = width;
+        this.height = height;
+    end function
+
+    # @summary: The width.
+    public real function GetWidth()
+        yield this.width;
+    end function
+
+    # @summary: The height.
+    public real function GetHeight()
+        yield this.height;
+    end function
+
+    # @summary: The area.
+    public real function GetArea()
+        yield this.width * this.height;
+    end function
+
+    # @summary: The perimeter.
+    public real function GetPerimeter()
+        yield this.width * 2 + this.height * 2;
+    end function
+
+    # @summary: The rectangle's stats, in a line.
+    # @name: what to call it.
+    public string function PrintRectangle(string name)
+        yield "Rectangle " + name + " is " + this.width
+            + " units wide and " + this.height + " units high.";
+    end function
+
+end model
